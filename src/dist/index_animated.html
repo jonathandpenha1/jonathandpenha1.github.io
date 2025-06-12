@@ -7,49 +7,117 @@
   <link rel="icon" href="favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="css/main.bundle.css">
   <script src="https://kit.fontawesome.com/4e5a72c756.js"></script>
-<script src="https://cdn.tailwindcss.com"></script>
-<style>
-  .blur {
-    filter: blur(100px);
+  <style>
+  .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+    overflow: hidden;
   }
 
-.hover-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.hover-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-}
-
-.animated {
-  animation: fadeInUp 0.8s ease-out forwards;
-}
-
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
+  .card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    background-color: #fdfdfd;
   }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
+  .card .card-content {
+    animation: fadeInUp 0.6s ease-in-out;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 10;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 100;
+      transform: translateY(0);
+    }
+  }
+
+  .card-gap {
+    margin-top: 2rem;
+  }
+
+  .tags {
+    margin-top: 1rem;
+  }
+
+  .tag {
+    background-color: #4a4a4a;
+    color: #fff;
+    margin-right: 0.5rem;
+    transition: transform 0.2s ease;
+  }
+
+  .tag:hover {
+    transform: scale(1.1);
+    background-color: #3273dc;
+  }
+
+  .media-left img {
+    border-radius: 8px;
+  }
 </style>
-<!-- Place these in your <head> -->
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="js/timeline.js"></script>
-<!-- Bootstrap & jQuery (Timeline dependencies) -->
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
+
+<style>
+/* === Animations & Interactions === */
+.section, .card, .tile, .media, .navbar, .footer {
+  animation: fadeIn 1s ease-out both;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.section:nth-child(1) { animation-delay: 0.2s; }
+.section:nth-child(2) { animation-delay: 0.4s; }
+.section:nth-child(3) { animation-delay: 0.6s; }
+
+.card, .tile {
+  transition: all 0.3s ease;
+}
+
+.card:hover, .tile:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  background-color: #fefefe;
+}
+
+.notification {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px;
+}
+
+.notification:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.tag:hover, .button:hover {
+  transform: scale(1.05);
+  transition: all 0.2s ease-in-out;
+}
+
+a.icon.has-text-light:hover {
+  color: #f0db4f !important;
+  transform: scale(1.1);
+}
+
+.modal-card {
+  animation: zoomIn 0.4s ease-in-out;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+</style>
 
 </head>
+
 <body>
   <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
@@ -80,52 +148,34 @@
     </div>
   </nav>
 
-<section class="hero is-primary" style="position: relative; overflow: hidden; font-family: 'Inter', sans-serif; min-height: auto;">
-  <!-- Background SVGs -->
-  <div class="absolute top-0 left-0 rotate-180 -translate-x-3/4 -scale-x-100 blur" style="pointer-events: none; opacity: 1.5;">
-    <img src="img/shape.svg" style="max-width: none; width: 852px; height: auto;" alt="Illustration" />
-  </div>
-  <div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 blur" style="pointer-events: none; opacity: 1.5;">
-    <img src="img/shape.svg" style="max-width: none; width: 852px; height: auto;" alt="Illustration" />
-  </div>
-
-  <!-- Particle Animation Canvas -->
-  <canvas data-particle-animation 
-          data-particle-quantity="120" 
-          data-particle-staticity="30" 
-          data-particle-ease="15" 
-          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;"></canvas>
-
-  <!-- Foreground Content -->
-  <div class="hero-body" style="position: relative; z-index: 1;">
-    <div class="container has-text-centered">
-      <div class="level">
-        <div class="level-item">
-          <figure class="image is-128x128">
-            <img class="is-rounded" src="img/me-big.jpg" style="object-fit: contain;">
-          </figure>
-        </div>
-      </div>
-      <br>
-      <div class="columns is-centered">
-        <div class="column is-8">
-          <h1 class="title is-1 has-text-weight-bold" style="background: linear-gradient(to right, #e2e8f0 60%, #f8fafc); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
-            Jonathan Derick DPenha
-          </h1>
-          <h2 class="subtitle has-text-light">
-            FullStack Developer, Mumbai, IN
-          </h2>
-          <p class="mt-4">
-            <a href="docs/resume.txt" class="icon has-text-light">
-              <i class="fas fa-file-word"></i> <strong>Resume</strong>
-            </a>
-          </p>
+  <section class="hero is-primary">
+    <div class="hero-body">
+      <div class="container">
+        <div class="level">
+          <div class="level-item has-text-centered">
+            <figure class="image is-128x128">
+              <img class="is-rounded" src="img/me-big.jpg" style="object-fit: contain;">
+            </figure>
+          </div>
+        </div><br>
+        <div class="columns has-text-centered">
+          <div class="column">
+            <h1 class="title is-1">
+              Jonathan Derick DPenha
+            </h1>
+            <h2 class="subtitle">
+              FullStack Developer, Mumbai, IN
+            </h2>
+            <p>
+              <a href="docs/resume.txt" class="icon has-text-light">
+                <i class="fas fa-file-word"></i> <strong>Resume</strong>
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-
+  </section>
 
   <!-- About -->
   <section class="section">
@@ -140,19 +190,21 @@
     </div>
   </section>
 
-<!-- Experience -->
-<section class="section" id="experience">
+  <!-- Experience-->
+  
+<!-- Experience Section -->
+<section class="section">
   <div class="container">
-    <h1 class="title has-text-centered anim">Experience</h1>
+    <h1 class="title">Experience</h1>
     <hr />
 
     <!-- Inficom Solutions -->
-    <div class="card anim hover-card">
+    <div class="card">
       <div class="card-content">
         <div class="media">
           <div class="media-left">
             <figure class="image is-48x48">
-              <img src="img/company/inficom.png" alt="Inficom logo" />
+              <img src="img/company/inficom.png" alt="Inficom logo">
             </figure>
           </div>
           <div class="media-content">
@@ -173,20 +225,18 @@
             <span class="tag">Firebase</span>
             <span class="tag">Bootstrap</span>
             <span class="tag">Full Stack</span>
-            <span class="tag">Flutter</span>
-            <span class="tag">Android</span>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Living Word Church -->
-    <div class="card anim hover-card">
+    <div class="card card-gap">
       <div class="card-content">
         <div class="media">
           <div class="media-left">
             <figure class="image is-48x48">
-              <img src="img/company/livingwordchurch.jpeg" alt="Living Word Church logo" />
+              <img src="img/company/livingwordchurch.jpeg" alt="Living Word Church logo">
             </figure>
           </div>
           <div class="media-content">
@@ -212,12 +262,12 @@
     </div>
 
     <!-- St. Andrew's College -->
-    <div class="card anim hover-card">
+    <div class="card card-gap">
       <div class="card-content">
         <div class="media">
           <div class="media-left">
             <figure class="image is-48x48">
-              <img src="img/company/andrews.jpeg" alt="St. Andrew's College logo" />
+              <img src="img/company/andrews.jpeg" alt="St. Andrew's College logo">
             </figure>
           </div>
           <div class="media-content">
@@ -242,12 +292,12 @@
     </div>
 
     <!-- Wizcraft International -->
-    <div class="card anim hover-card">
+    <div class="card card-gap">
       <div class="card-content">
         <div class="media">
           <div class="media-left">
             <figure class="image is-48x48">
-              <img src="img/company/wizcraft.jpeg" alt="Wizcraft logo" />
+              <img src="img/company/wizcraft.jpeg" alt="Wizcraft logo">
             </figure>
           </div>
           <div class="media-content">
@@ -276,13 +326,11 @@
   </div>
 </section>
 
-
-
   <section class="section">
     <div class="container">
       <h1 class="title">Projects</h1>
       <hr />
-      <div class="tile is-ancestor anim hover-card">
+      <div class="tile is-ancestor">
         <div class="tile is-vertical is-12">
           <div class="tile">
             <div class="tile is-parent">
@@ -312,7 +360,7 @@
           </div>
         </div>
       </div>
-      <div class="tile is-ancestor anim hover-card">
+      <div class="tile is-ancestor">
         <div class="tile is-vertical is-12">
           <div class="tile">
             <div class="tile is-parent">
@@ -348,16 +396,16 @@
     <!-- Education -->
   <section class="section">
   <div class="container">
-    <h1 class="title">Education</h1>
+    <h1 class="title">Education / Training</h1>
     <hr />
 
     <!-- MSc (Computer Applications) -->
-    <div class="card anim hover-card">
+    <div class="card">
       <div class="card-content">
         <div class="media">
           <div class="media-left">
             <figure class="image is-48x48">
-              <img src="img/education/SICSR.png" alt="Symbiosis logo" onerror="this.onerror=null;this.src='https://cdn-icons-png.flaticon.com/512/3176/3176364.png';">
+              <img src="img/symbiosis-logo.png" alt="Symbiosis logo" onerror="this.onerror=null;this.src='https://cdn-icons-png.flaticon.com/512/3176/3176364.png';">
             </figure>
           </div>
           <div class="media-content">
@@ -380,12 +428,12 @@
     </div>
 
     <!-- BSc IT -->
-    <div class="card card-gap anim hover-card">
+    <div class="card card-gap">
       <div class="card-content">
         <div class="media">
           <div class="media-left">
             <figure class="image is-48x48">
-              <img src="img/education/andrews.jpeg" alt="St. Andrew's logo" onerror="this.onerror=null;this.src='https://cdn-icons-png.flaticon.com/512/3176/3176364.png';">
+              <img src="img/standrews-logo.png" alt="St. Andrew's logo" onerror="this.onerror=null;this.src='https://cdn-icons-png.flaticon.com/512/3176/3176364.png';">
             </figure>
           </div>
           <div class="media-content">
@@ -423,6 +471,14 @@
               <i class="fab fa-2x fa-github"></i>
             </a>
             <p class="heading"><a href="https://github.com/jonathandpenha1">github.com/jonathandpenha1</a></p>
+          </div>
+        </div>
+        <div class="level-item has-text-centered">
+          <div>
+            <a href="https://fullstackmark.com" class="icon is-large">
+              <i class="fas fa-2x fa-globe"></i>
+            </a>
+            <p class="heading"><a href="https://fullstackmark.com">fullstackmark.com</a></p>
           </div>
         </div>
         <div class="level-item has-text-centered">
@@ -626,9 +682,6 @@
             <li>Integrated MySQL and Firebase Firestore for real-time data synchronization between web and mobile interfaces.</li>
             <li>Enhanced the admin dashboard using Bootstrap to manage geospatial data and crop workflow processes.</li>
             <li>Implemented responsive frontend interfaces for admin and field operators, supporting seamless data visualization and management.</li>
-            <li>Developed backend logic in Laravel PHP with MySQL and Firebase Firestore.</li>
-            <li>Enhanced dashboard UI using Bootstrap.</li>
-            <li>Designed responsive admin and mobile interfaces.</li>
           </ul>
 
           <div class="tags">
@@ -755,8 +808,6 @@
   </footer>
 
   <script src="js/bundle.js"></script>
-    <script src="js/particle.js"></script>
-
 </body>
 
 </html>
