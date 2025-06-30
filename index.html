@@ -311,65 +311,80 @@
 
 
 <!-- Projects Section -->
-<section id="projects" class="py-16 bg-white-50 max-w-4xl mx-auto">
+<section id="projects" class="py-16 bg-white-50 max-w-7xl mx-auto">
   <div class="container mx-auto px-4">
-    <h1 class="text-4xl font-bold text-left mb-12">Projects</h1>
-    <hr/><br>
+    <h1 class="text-4xl font-bold text-center mb-12">Projects</h1>
+    <hr class="mb-8">
 
     <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-
-    <!-- Project 1 -->
-    <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300" data-aos="fade-up">
-      <img class="modal-trigger rounded-md cursor-pointer" data-target="project-1-modal" src="img/project-1-cover.png" alt="BusyBees Montessori School" />
-      <div class="p-4">
-        <h2 class="text-lg font-semibold mb-2">BusyBees Montessori School</h2>
-      </div>
-    </div>
-
-    <!-- Project 2 -->
-    <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300" data-aos="fade-up" data-aos-delay="100">
-      <img class="modal-trigger rounded-md cursor-pointer" data-target="project-2-modal" src="img/project-2-cover.png" alt="Institute ERP System" />
-      <div class="p-4">
-        <h2 class="text-lg font-semibold mb-2">Institute ERP System</h2>
-      </div>
-    </div>
-
-    <!-- Project 3 -->
-    <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300" data-aos="fade-up" data-aos-delay="200">
-      <img class="modal-trigger rounded-md cursor-pointer w-full h-48 object-contain" data-target="project-3-modal" src="img/project-3-cover.png" alt="GeoMapperX - Mobile App" />
-      <div class="p-4">
-        <h2 class="text-lg font-semibold mb-2">GeoMapperX - Mobile App</h2>
-      </div>
-    </div>
-
-
-      <!-- Project 4 -->
-      <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300" data-aos="fade-up" data-aos-delay="300">
-        <img class="modal-trigger rounded-md cursor-pointer" style="object-fit: contain;" data-target="project-4-modal" src="img/project-4-cover.png" alt="GeoMapperX - Web App" />
-        <div class="p-4">
-          <h2 class="text-lg font-semibold mb-2">GeoMapperX - Web App</h2>
+      
+      <!-- Template for Each Project -->
+      <!-- Repeat this for each project and change content accordingly -->
+      <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col" data-aos="fade-up">
+        <img class="modal-trigger rounded-t-md cursor-pointer w-full h-48 object-contain" 
+             data-target="project-1-modal" 
+             src="img/project-1-cover.png" 
+             alt="BusyBees Montessori School" />
+        <div class="p-4 flex-grow flex items-end">
+          <h2 class="text-lg font-semibold text-center w-full">BusyBees Montessori School</h2>
         </div>
       </div>
 
-      <!-- Project 5 -->
-      <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300" data-aos="fade-up" data-aos-delay="400">
-        <img class="modal-trigger rounded-md cursor-pointer" style="object-fit: contain;" data-target="project-5-modal" src="img/project-5-cover.png" alt="Counselling With Arleen Dias" />
-        <div class="p-4">
-          <h2 class="text-lg font-semibold mb-2">Counselling With Arleen Dias</h2>
+      <!-- Repeat for all other projects with different src/alt/target -->
+      <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col" data-aos="fade-up" data-aos-delay="100">
+        <img class="modal-trigger rounded-t-md cursor-pointer w-full h-48 object-contain" 
+             data-target="project-2-modal" 
+             src="img/project-2-cover.png" 
+             alt="Institute ERP System" />
+        <div class="p-4 flex-grow flex items-end">
+          <h2 class="text-lg font-semibold text-center w-full">Institute ERP System</h2>
         </div>
       </div>
 
-      <!-- Project 6 -->
-      <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300" data-aos="fade-up" data-aos-delay="500">
-        <img class="modal-trigger rounded-md cursor-pointer" style="object-fit: contain;" data-target="project-6-modal" src="img/project-6-cover.png" alt="Science Transactions (OJS)" />
-        <div class="p-4">
-          <h2 class="text-lg font-semibold mb-2">Science Transactions (OJS)</h2>
+      <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col" data-aos="fade-up" data-aos-delay="200">
+        <img class="modal-trigger rounded-t-md cursor-pointer w-full h-48 object-contain" 
+             data-target="project-3-modal" 
+             src="img/project-3-cover.png" 
+             alt="GeoMapperX - Mobile App" />
+        <div class="p-4 flex-grow flex items-end">
+          <h2 class="text-lg font-semibold text-center w-full">GeoMapperX - Mobile App</h2>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col" data-aos="fade-up" data-aos-delay="300">
+        <img class="modal-trigger rounded-t-md cursor-pointer w-full h-48 object-contain" 
+             data-target="project-4-modal" 
+             src="img/project-4-cover.png" 
+             alt="GeoMapperX - Web App" />
+        <div class="p-4 flex-grow flex items-end">
+          <h2 class="text-lg font-semibold text-center w-full">GeoMapperX - Web App</h2>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col" data-aos="fade-up" data-aos-delay="400">
+        <img class="modal-trigger rounded-t-md cursor-pointer w-full h-48 object-contain" 
+             data-target="project-5-modal" 
+             src="img/project-5-cover.png" 
+             alt="Counselling With Arleen Dias" />
+        <div class="p-4 flex-grow flex items-end">
+          <h2 class="text-lg font-semibold text-center w-full">Counselling With Arleen Dias</h2>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col" data-aos="fade-up" data-aos-delay="500">
+        <img class="modal-trigger rounded-t-md cursor-pointer w-full h-48 object-contain" 
+             data-target="project-6-modal" 
+             src="img/project-6-cover.png" 
+             alt="Science Transactions (OJS)" />
+        <div class="p-4 flex-grow flex items-end">
+          <h2 class="text-lg font-semibold text-center w-full">Science Transactions (OJS)</h2>
         </div>
       </div>
 
     </div>
   </div>
 </section>
+
 
     <!-- Education -->
 <section id="education" class="py-16 bg-white-50 max-w-4xl mx-auto">
@@ -573,13 +588,13 @@
 
         <div id="project-2-modal-carousel" class="carousel">
           <figure class="image is-4by3 carousel-cell">
-            <img src="img/carousel/erp-1.png" style="object-fit: contain;" alt="ERP Dashboard Overview" onerror="this.onerror=null;this.src='img/fallback.png';">
+            <img src="img/carousel/project2/1.png" style="object-fit: contain;" alt="ERP Dashboard Overview" onerror="this.onerror=null;this.src='img/fallback.png';">
           </figure>
           <figure class="image is-4by3 carousel-cell">
-            <img src="img/carousel/erp-2.png" style="object-fit: contain;" alt="User Management Interface" onerror="this.onerror=null;this.src='img/fallback.png';">
+            <img src="img/carousel/project2/2.png" style="object-fit: contain;" alt="User Management Interface" onerror="this.onerror=null;this.src='img/fallback.png';">
           </figure>
           <figure class="image is-4by3 carousel-cell">
-            <img src="img/carousel/erp-3.png" style="object-fit: contain;" alt="Attendance & Reporting Module" onerror="this.onerror=null;this.src='img/fallback.png';">
+            <img src="img/carousel/project2/3.png" style="object-fit: contain;" alt="Attendance & Reporting Module" onerror="this.onerror=null;this.src='img/fallback.png';">
           </figure>
         </div>
 
