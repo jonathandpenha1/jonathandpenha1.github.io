@@ -1,1042 +1,1612 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <title>Jonathan DPenha</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Official portfolio of Jonathan DPenha – full-stack developer, designer, and problem solver. View my projects, contact me, or learn more."
+    />
+    <meta
+      name="keywords"
+      content="Jonathan DPenha, Jonathan D'Penha, Jonathan Dpenha , jonathan dpenha, web developer, software engineer, portfolio, full-stack developer"
+    />
+    <meta name="author" content="Jonathan DPenha" />
+    <link rel="canonical" href="https://jonathandpenha1.github.io/" />
+    <link rel="icon" href="favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/main.bundle.css" />
+    <script src="https://kit.fontawesome.com/4e5a72c756.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .blur {
+        filter: blur(100px);
+      }
 
-<head>
-  <title>Jonathan DPenha</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Official portfolio of Jonathan DPenha – full-stack developer, designer, and problem solver. View my projects, contact me, or learn more." />
-  <meta name="keywords" content="Jonathan DPenha, Jonathan D'Penha, Jonathan Dpenha , jonathan dpenha, web developer, software engineer, portfolio, full-stack developer" />
-  <meta name="author" content="Jonathan DPenha" />
-  <link rel="canonical" href="https://jonathandpenha1.github.io/" />
-  <link rel="icon" href="favicon.png" type="image/x-icon">
-  <link rel="stylesheet" href="css/main.bundle.css">
-  <script src="https://kit.fontawesome.com/4e5a72c756.js"></script>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    .blur {
-      filter: blur(100px);
-    }
+      .hover-card {
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+      .hover-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+      }
 
-  .hover-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  .hover-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-  }
+      .animated {
+        animation: fadeInUp 0.8s ease-out forwards;
+      }
 
-  .animated {
-    animation: fadeInUp 0.8s ease-out forwards;
-  }
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+    <style>
+      .tag {
+        @apply inline-block bg-blue-200 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded;
+      }
+    </style>
 
-  @keyframes fadeInUp {
-    0% {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+    <!-- AOS CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
 
-  </style>
-  <style>
-    .tag {
-      @apply inline-block bg-blue-200 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded;
-    }
-  </style>
+    <!-- Place these in your <head> -->
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/timeline.js"></script>
+    <!-- Bootstrap & jQuery (Timeline dependencies) -->
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
-<!-- AOS CSS -->
-<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
-
-<!-- Place these in your <head> -->
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="js/timeline.js"></script>
-<!-- Bootstrap & jQuery (Timeline dependencies) -->
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
- <!-- Open Graph for sharing -->
-  <meta property="og:title" content="Jonathan DPenha - Portfolio" />
-  <meta property="og:description" content="Explore the portfolio of Jonathan DPenha – a creative web developer and designer." />
-  <meta property="og:url" content="https://jonathandpenha1.github.io/" />
-  <meta property="og:image" content="https://jonathandpenha1.github.io/img/me-big.jpg" />
-  <meta property="og:type" content="website" />
-
-</head>
-<body>
-  <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <div class="navbar-item is-hidden-desktop">
-        <a href="https://github.com/jonathandpenha1" class="icon is-large has-text-light">
-          <i class="fab fa-2x fa-github"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/jonathan-dpenha/" class="icon is-large has-text-light">
-          <i class="fab fa-linkedin fa-2x"></i>
-        </a>
-      </div>
-    </div>
-    <div class="navbar-menu">
-      <div class="navbar-end">
-        <div class="navbar-item">
-          <a href="https://github.com/jonathandpenha1" class="icon is-large has-text-light">
+    <!-- Open Graph for sharing -->
+    <meta property="og:title" content="Jonathan DPenha - Portfolio" />
+    <meta
+      property="og:description"
+      content="Explore the portfolio of Jonathan DPenha – a creative web developer and designer."
+    />
+    <meta property="og:url" content="https://jonathandpenha1.github.io/" />
+    <meta
+      property="og:image"
+      content="https://jonathandpenha1.github.io/img/me-big.jpg"
+    />
+    <meta property="og:type" content="website" />
+  </head>
+  <body>
+    <nav
+      class="navbar is-primary"
+      role="navigation"
+      aria-label="main navigation"
+    >
+      <div class="navbar-brand">
+        <div class="navbar-item is-hidden-desktop">
+          <a
+            href="https://github.com/jonathandpenha1"
+            class="icon is-large has-text-light"
+          >
             <i class="fab fa-2x fa-github"></i>
           </a>
-        </div>
-        <div class="navbar-item">
-          <a href="https://www.linkedin.com/in/jonathan-dpenha/" class="icon is-large has-text-light">
-           <i class="fab fa-linkedin fa-2x"></i>
+          <a
+            href="https://www.linkedin.com/in/jonathan-dpenha/"
+            class="icon is-large has-text-light"
+          >
+            <i class="fab fa-linkedin fa-2x"></i>
           </a>
         </div>
       </div>
-    </div>
-  </nav>
-
-<section class="hero is-primary" style="position: relative; overflow: hidden; font-family: 'Inter', sans-serif; min-height: auto;">
-  <!-- Background SVGs -->
-  <div class="absolute top-0 left-0 rotate-180 -translate-x-3/4 -scale-x-100 blur" style="pointer-events: none; opacity: 1.5;">
-    <img src="img/shape.svg" style="max-width: none; width: 852px; height: auto;" alt="Illustration" />
-  </div>
-  <div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 blur" style="pointer-events: none; opacity: 1.5;">
-    <img src="img/shape.svg" style="max-width: none; width: 852px; height: auto;" alt="Illustration" />
-  </div>
-
-  <!-- Particle Animation Canvas -->
-  <canvas data-particle-animation 
-          data-particle-quantity="120" 
-          data-particle-staticity="30" 
-          data-particle-ease="15" 
-          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;"></canvas>
-
-  <!-- Foreground Content -->
-  <div class="hero-body" style="position: relative; z-index: 1;">
-    <div class="container has-text-centered">
-      <div class="level">
-        <div class="level-item">
-          <figure class="image is-128x128">
-            <img class="is-rounded" src="img/me-big.jpg" style="object-fit: contain;">
-          </figure>
-        </div>
-      </div>
-      <br>
-      <div class="columns is-centered">
-        <div class="column is-8 has-text-centered">
-          <h1 class="title is-1 has-text-weight-bold"
-              style="background: linear-gradient(to right, #e2e8f0 60%, #f8fafc); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
-            Jonathan Derick DPenha
-          </h1>
-          
-          <h2 class="subtitle has-text-grey-light is-4">
-            Full-Stack Developer · Mumbai, IN
-          </h2>
-
-          <p class="mt-4">
-            <a href="docs/JONATHAN_DPENHA_RESUME.pdf" class="button is-light is-outlined is-medium" target="_blank" rel="noopener noreferrer">
-              <span class="icon">
-                <i class="fas fa-file-pdf"></i>
-              </span>
-               <span><strong>Resume</strong></span>
-            </a>
-            <a href="https://www.linkedin.com/in/jonathan-dpenha/" class="button is-light is-outlined is-medium" target="_blank" rel="noopener noreferrer">
-              <span class="icon">
-                <i class="fab fa-linkedin"></i>
-              </span>
-               <span><strong>LinkedIn</strong></span>
-            </a>
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<main>
-<!-- About -->
-<section id="experience" class="py-16 max-w-4xl mx-auto bg-white">
-  <div class="container">
-    <h1 class="text-4xl font-bold mb-12 text-left">About Me</h1>
-    <hr/><br>
-    <p class="content">
-      I'm <strong>Jonathan DPenha</strong>, a passionate <strong>Full-Stack Developer</strong> and MSc Computer Applications student. I specialize in building responsive, scalable applications using technologies like <strong>Laravel</strong>, <strong>Firebase</strong>, and <strong>JavaScript</strong>. 
-      <br><br>
-      I've contributed to real-world platforms such as <strong>GeoMapperX</strong>, where I combined problem-solving with clean, efficient code. I value collaboration, attention to detail, and a mindset of continuous improvement. 
-      <br><br>
-      I'm always eager to push boundaries and bring impactful digital solutions to life.
-    </p>
-  </div>
-</section>
-
-<!-- Experience -->
-<section id="experience" class="py-16 max-w-4xl mx-auto bg-white">
-  <div class="container mx-auto px-4">
-    <h1 class="text-4xl font-bold mb-12 text-left">Experience</h1>
-    <hr/><br><br>
-
-    <div class="relative">
-      <div class="border-l-4 border-blue-500 absolute left-1/2 transform -translate-x-1/2 h-full"></div>
-
-      <!-- Inficom Solutions (2025) -->
-      <div class="mb-16 flex flex-col md:flex-row-reverse items-center md:justify-between relative">
-        <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 -top-6">
-          <span class="bg-white text-blue-600 font-semibold px-2 text-sm shadow rounded">2025</span>
-        </div>
-
-        <div class="w-full md:w-5/12" data-aos="fade-left">
-          <div class="bg-gray-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
-            <div class="flex items-center mb-3">
-              <img src="img/company/inficom.png" class="w-12 h-12 mr-4 rounded" alt="Inficom logo" />
-              <div>
-                <h3 class="text-xl font-semibold">Inficom Solutions</h3>
-                <p class="text-sm text-gray-600">Full Stack Developer Intern | Dec 2024 - May 2025</p>
-              </div>
-            </div>
-            <p class="mb-2">Worked on GeoMapperX - a geolocation-based platform for agricultural management.</p>
-            <ul class="list-disc list-inside text-sm text-gray-700 mb-2">
-              <li>Developed backend logic in Laravel PHP, integrating MySQL and Firebase Firestore.</li>
-              <li>Enhanced web dashboard using Bootstrap.</li>
-              <li>Designed responsive frontend interfaces for admin and mobile apps.</li>
-            </ul>
-            <div class="flex flex-wrap gap-2 mt-3">
-              <span class="bg-blue-200 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Laravel</span>
-              <span class="bg-blue-200 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">MySQL</span>
-              <span class="bg-blue-200 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Firebase</span>
-              <span class="bg-blue-200 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Bootstrap</span>
-              <span class="bg-blue-200 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Flutter</span>
-              <span class="bg-blue-200 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Android</span>
-            </div>
-          </div>
-        </div>
-        <div class="hidden md:block w-2 h-2 bg-blue-500 rounded-full z-10"></div>
-        <div class="w-full md:w-5/12" data-aos="fade-right"></div>
-      </div>
-
-      <!-- Living Word Church (2024) -->
-      <div class="mb-16 flex flex-col md:flex-row items-center md:justify-between relative">
-        <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 -top-6">
-          <span class="bg-white text-blue-600 font-semibold px-2 text-sm shadow rounded">2024</span>
-        </div>
-
-        <div class="w-full md:w-5/12" data-aos="fade-right">
-          <div class="bg-gray-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
-            <div class="flex items-center mb-3">
-              <img src="img/company/livingwordchurch.jpeg" class="w-12 h-12 mr-4 rounded" alt="Living Word Church logo" />
-              <div>
-                <h3 class="text-xl font-semibold">Living Word Church</h3>
-                <p class="text-sm text-gray-600">Web Developer | Aug 2020 - Dec 2024</p>
-              </div>
-            </div>
-            <p class="mb-2">Managed and improved the church’s website infrastructure and server setup.</p>
-            <ul class="list-disc list-inside text-sm text-gray-700 mb-2">
-              <li>Reviewed and updated website content regularly.</li>
-              <li>Improved performance through optimization.</li>
-              <li>Managed Zoho mail servers and WordPress maintenance.</li>
-            </ul>
-            <div class="flex flex-wrap gap-2 mt-3">
-              <span class="bg-blue-200 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">WordPress</span>
-              <span class="bg-blue-200 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Server Management</span>
-              <span class="bg-blue-200 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Zoho</span>
-              <span class="bg-blue-200 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Web Performance</span>
-            </div>
-          </div>
-        </div>
-        <div class="hidden md:block w-2 h-2 bg-blue-500 rounded-full z-10"></div>
-        <div class="w-full md:w-5/12" data-aos="fade-left"></div>
-      </div>
-
-      <!-- St. Andrew's College (2023) -->
-      <div class="mb-16 flex flex-col md:flex-row-reverse items-center md:justify-between relative">
-        <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 -top-6">
-          <span class="bg-white text-blue-600 font-semibold px-2 text-sm shadow rounded">2023</span>
-        </div>
-
-        <div class="w-full md:w-5/12" data-aos="fade-left">
-          <div class="bg-gray-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
-            <div class="flex items-center mb-3">
-              <img src="img/company/andrews.jpeg" class="w-12 h-12 mr-4 rounded" alt="St. Andrew's logo" />
-              <div>
-                <h3 class="text-xl font-semibold">St. Andrew's College</h3>
-                <p class="text-sm text-gray-600">Web Developer Intern | Nov 2021 - Mar 2023</p>
-              </div>
-            </div>
-            <p class="mb-2">Built and maintained the college’s website to support academic and administrative needs.</p>
-            <ul class="list-disc list-inside text-sm text-gray-700 mb-2">
-              <li>Maintained and updated WordPress website content and interface design.</li>
-              <li>Improved functionality and usability based on feedback and analytics.</li>
-              <li>Tested and debugged features for cross-platform performance.</li>
-            </ul>
-            <div class="flex flex-wrap gap-2 mt-3">
-              <span class="bg-blue-200 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">WordPress</span>
-              <span class="bg-blue-200 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Web Testing</span>
-              <span class="bg-blue-200 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">UI/UX</span>
-            </div>
-          </div>
-        </div>
-        <div class="hidden md:block w-2 h-2 bg-blue-500 rounded-full z-10"></div>
-        <div class="w-full md:w-5/12" data-aos="fade-right"></div>
-      </div>
-
-      <!-- Wizcraft International (2021) -->
-      <div class="mb-16 flex flex-col md:flex-row items-center md:justify-between relative">
-        <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 -top-6">
-          <span class="bg-white text-blue-600 font-semibold px-2 text-sm shadow rounded">2021</span>
-        </div>
-
-        <div class="w-full md:w-5/12" data-aos="fade-right">
-          <div class="bg-gray-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
-            <div class="flex items-center mb-3">
-              <img src="img/company/wizcraft.jpeg" class="w-12 h-12 mr-4 rounded" alt="Wizcraft logo" />
-              <div>
-                <h3 class="text-xl font-semibold">Wizcraft International</h3>
-                <p class="text-sm text-gray-600">Junior Software Engineer | Sep 2020 - Nov 2021</p>
-              </div>
-            </div>
-            <p class="mb-2">Worked on developing internal tools and automations for event management operations.</p>
-            <ul class="list-disc list-inside text-sm text-gray-700 mb-2">
-              <li>Built web applications using Python, PHP, JavaScript, HTML, and CSS.</li>
-              <li>Maintained automation scripts for internal workflows.</li>
-              <li>Troubleshot and optimized backend logic.</li>
-            </ul>
-            <div class="flex flex-wrap gap-2 mt-3">
-              <span class="bg-blue-200 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Python</span>
-              <span class="bg-blue-200 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">PHP</span>
-              <span class="bg-blue-200 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Automation</span>
-              <span class="bg-blue-200 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">JavaScript</span>
-              <span class="bg-blue-200 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Debugging</span>
-            </div>
-          </div>
-        </div>
-        <div class="hidden md:block w-2 h-2 bg-blue-500 rounded-full z-10"></div>
-        <div class="w-full md:w-5/12" data-aos="fade-left"></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-<!-- Projects Section -->
-<section id="projects" class="py-16 bg-white-50 max-w-7xl mx-auto">
-  <div class="container mx-auto px-4">
-    <h1 class="text-4xl font-bold text-center mb-12">Projects</h1>
-    <hr class="mb-8">
-
-    <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-      
-      <!-- Template for Each Project -->
-      <!-- Repeat this for each project and change content accordingly -->
-      <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col" data-aos="fade-up">
-        <img class="modal-trigger rounded-t-md cursor-pointer w-full h-48 object-contain" 
-             data-target="project-1-modal" 
-             src="img/project-1-cover.png" 
-             alt="BusyBees Montessori School" />
-        <div class="p-4 flex-grow flex items-end">
-          <h2 class="text-lg font-semibold text-center w-full">BusyBees Montessori School</h2>
-        </div>
-      </div>
-
-      <!-- Repeat for all other projects with different src/alt/target -->
-      <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col" data-aos="fade-up" data-aos-delay="100">
-        <img class="modal-trigger rounded-t-md cursor-pointer w-full h-48 object-contain" 
-             data-target="project-2-modal" 
-             src="img/project-2-cover.png" 
-             alt="Institute ERP System" />
-        <div class="p-4 flex-grow flex items-end">
-          <h2 class="text-lg font-semibold text-center w-full">Institute ERP System</h2>
-        </div>
-      </div>
-
-      <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col" data-aos="fade-up" data-aos-delay="200">
-        <img class="modal-trigger rounded-t-md cursor-pointer w-full h-48 object-contain" 
-             data-target="project-3-modal" 
-             src="img/project-3-cover.png" 
-             alt="GeoMapperX - Mobile App" />
-        <div class="p-4 flex-grow flex items-end">
-          <h2 class="text-lg font-semibold text-center w-full">GeoMapperX - Mobile App</h2>
-        </div>
-      </div>
-
-      <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col" data-aos="fade-up" data-aos-delay="300">
-        <img class="modal-trigger rounded-t-md cursor-pointer w-full h-48 object-contain" 
-             data-target="project-4-modal" 
-             src="img/project-4-cover.png" 
-             alt="GeoMapperX - Web App" />
-        <div class="p-4 flex-grow flex items-end">
-          <h2 class="text-lg font-semibold text-center w-full">GeoMapperX - Web App</h2>
-        </div>
-      </div>
-
-      <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col" data-aos="fade-up" data-aos-delay="400">
-        <img class="modal-trigger rounded-t-md cursor-pointer w-full h-48 object-contain" 
-             data-target="project-5-modal" 
-             src="img/project-5-cover.png" 
-             alt="Counselling With Arleen Dias" />
-        <div class="p-4 flex-grow flex items-end">
-          <h2 class="text-lg font-semibold text-center w-full">Counselling With Arleen Dias</h2>
-        </div>
-      </div>
-
-      <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col" data-aos="fade-up" data-aos-delay="500">
-        <img class="modal-trigger rounded-t-md cursor-pointer w-full h-48 object-contain" 
-             data-target="project-6-modal" 
-             src="img/project-6-cover.png" 
-             alt="Science Transactions (OJS)" />
-        <div class="p-4 flex-grow flex items-end">
-          <h2 class="text-lg font-semibold text-center w-full">Science Transactions (OJS)</h2>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-    <!-- Education -->
-<section id="education" class="py-16 bg-white-50 max-w-4xl mx-auto">
-  <div class="container mx-auto px-4">
-    <h1 class="text-4xl font-bold text-left mb-12">Education</h1>
-    <hr /><br>
-
-    <!-- MSc (Computer Applications) -->
-    <div class="card anim hover-card mb-6" data-aos="fade-up">
-      <div class="card-content">
-        <div class="media is-flex-wrap-wrap">
-          <div class="media-left">
-            <figure class="image is-48x48">
-              <img src="img/education/SICSR.png" alt="Symbiosis logo"
-                onerror="this.onerror=null;this.src='https://cdn-icons-png.flaticon.com/512/3176/3176364.png';">
-            </figure>
-          </div>
-          <div class="media-content">
-            <div class="block">
-              <p class="title is-5 mb-0">Symbiosis Institute of Computer Studies and Research</p>
-              <p class="subtitle is-6 has-text-grey mt-1">
-                MSc in Computer Applications — 
-                <time datetime="2023-07">Jul 2023</time> – 
-                <time datetime="2025-05">May 2025</time>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="content mt-3">
-          <p>Specialization in Software Development<br>Focused on full stack development, OOP, database management, and real-world software project experience.</p>
-          <ul class="mt-3">
-            <li>📊 CGPA: 8.65 (Sem 1: 7.89, Sem 2: 8.98, Sem 3: 9.08)</li>
-            <li>🏆 Scholarships for 2nd rank in Sem 2 & 3</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- BSc (IT) -->
-    <div class="card anim hover-card" data-aos="fade-up" data-aos-delay="100">
-      <div class="card-content">
-        <div class="media is-flex-wrap-wrap">
-          <div class="media-left">
-            <figure class="image is-48x48">
-              <img src="img/education/andrews.jpeg" alt="St. Andrew's logo"
-                onerror="this.onerror=null;this.src='https://cdn-icons-png.flaticon.com/512/3176/3176364.png';">
-            </figure>
-          </div>
-          <div class="media-content">
-            <div class="block">
-              <p class="title is-5 mb-0">St. Andrew's College of Arts, Science and Commerce, Mumbai</p>
-              <p class="subtitle is-6 has-text-grey mt-1">
-                BSc in Information Technology — 
-                <time datetime="2020-06">Jun 2020</time> – 
-                <time datetime="2023-06">Jun 2023</time>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="content mt-3">
-          <p>Gained strong foundation in programming, databases, and web technologies.</p>
-          <ul class="mt-3">
-            <li>🎓 GPA: 9.17</li>
-            <li>💻 Led college tech fest website; active in tech events</li>
-            <li>🏀 Secured 2nd place in District-level Basketball Tournament</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-</main>
-
-
-
-  <section id="contact" class="py-16 bg-white-50 max-w-4xl mx-auto">
-  <div class="container mx-auto px-4">
-    <h1 class="text-2xl font-bold text-center mb-12">Get in touch</h1>
-      <hr />
-      <nav class="level">
-        <div class="level-item has-text-centered">
-          <div>
-            <a href="https://github.com/jonathandpenha1" class="icon is-large">
+      <div class="navbar-menu">
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <a
+              href="https://github.com/jonathandpenha1"
+              class="icon is-large has-text-light"
+            >
               <i class="fab fa-2x fa-github"></i>
             </a>
-            <p class="heading"><a href="https://github.com/jonathandpenha1">github.com/jonathandpenha1</a></p>
           </div>
-        </div>
-        <div class="level-item has-text-centered">
-          <div>
-            <a href="mailto:dpenhajonathan@gmail.com" class="icon is-large">
-              <i class="fas fa-2x fa-envelope"></i>
+          <div class="navbar-item">
+            <a
+              href="https://www.linkedin.com/in/jonathan-dpenha/"
+              class="icon is-large has-text-light"
+            >
+              <i class="fab fa-linkedin fa-2x"></i>
             </a>
-            <p class="heading"><a href="mailto:dpenhajonathan@gmail.com">dpenhajonathan@gmail.com</a></p>
           </div>
         </div>
-        <div class="level-item has-text-centered">
-          <div>
-            <a href="https://www.linkedin.com/in/jonathan-dpenha/" class="icon is-large">
-              <i class="fab fa-2x fa-linkedin-in"></i>
-            </a>
-            <p class="heading"><a href="https://www.linkedin.com/in/jonathan-dpenha/">linkedin</a></p>
+      </div>
+    </nav>
+
+    <section
+      class="hero is-primary"
+      style="
+        position: relative;
+        overflow: hidden;
+        font-family: &quot;Inter&quot;, sans-serif;
+        min-height: auto;
+      "
+    >
+      <!-- Background SVGs -->
+      <div
+        class="absolute top-0 left-0 rotate-180 -translate-x-3/4 -scale-x-100 blur"
+        style="pointer-events: none; opacity: 1.5"
+      >
+        <img
+          src="img/shape.svg"
+          style="max-width: none; width: 852px; height: auto"
+          alt="Illustration"
+        />
+      </div>
+      <div
+        class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 blur"
+        style="pointer-events: none; opacity: 1.5"
+      >
+        <img
+          src="img/shape.svg"
+          style="max-width: none; width: 852px; height: auto"
+          alt="Illustration"
+        />
+      </div>
+
+      <!-- Particle Animation Canvas -->
+      <canvas
+        data-particle-animation
+        data-particle-quantity="120"
+        data-particle-staticity="30"
+        data-particle-ease="15"
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 0;
+        "
+      ></canvas>
+
+      <!-- Foreground Content -->
+      <div class="hero-body" style="position: relative; z-index: 1">
+        <div class="container has-text-centered">
+          <div class="level">
+            <div class="level-item">
+              <figure class="image is-128x128">
+                <img
+                  class="is-rounded"
+                  src="img/me-big.jpg"
+                  alt="Jonathan DPenha - Full-Stack Developer"
+                  style="object-fit: contain"
+                />
+              </figure>
+            </div>
+          </div>
+          <br />
+          <div class="columns is-centered">
+            <div class="column is-8 has-text-centered">
+              <h1
+                class="title is-1 has-text-weight-bold"
+                style="
+                  background: linear-gradient(to right, #e2e8f0 60%, #f8fafc);
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                "
+              >
+                Jonathan Derick DPenha
+              </h1>
+
+              <h2 class="subtitle has-text-grey-light is-4">
+                Full-Stack Developer · Mumbai, IN
+              </h2>
+
+              <p class="mt-4">
+                <a
+                  href="docs/JONATHAN_DPENHA_RESUME.pdf"
+                  class="button is-light is-outlined is-medium"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span><strong>Resume</strong></span>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/jonathan-dpenha/"
+                  class="button is-light is-outlined is-medium"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span class="icon">
+                    <i class="fab fa-linkedin"></i>
+                  </span>
+                  <span><strong>LinkedIn</strong></span>
+                </a>
+              </p>
+            </div>
           </div>
         </div>
-      </nav>
-    </div>
-  </section>
+      </div>
+    </section>
 
-  <!-- Modals -->
-  <div id="project-1-modal" class="modal">
-    <div class="modal-background"></div>
-    <div class="modal-card">
-      <header class="modal-card-head">
-        <p class="modal-card-title">Busy Bee Montessori ERP System</p>
-        <button class="delete has-background-dark" aria-label="close" onclick="document.getElementById('project-1-modal').classList.remove('is-active')"></button>
-      </header>
-      <section class="modal-card-body">
-
-        <div id="project-1-modal-carousel" class="carousel">
-          <figure class="image is-4by3 carousel-cell">
-            <img src="img/carousel/project1/1.png" style="object-fit: contain;" alt="Dashboard view" onerror="this.onerror=null;this.src='img/fallback.png';">
-          </figure>
-          <figure class="image is-4by3 carousel-cell">
-            <img src="img/carousel/project1/2.png" style="object-fit: contain;" alt="Student records" onerror="this.onerror=null;this.src='img/fallback.png';">
-          </figure>
-          <figure class="image is-4by3 carousel-cell">
-            <img src="img/carousel/project1/3.png" style="object-fit: contain;" alt="Fee management module" onerror="this.onerror=null;this.src='img/fallback.png';">
-          </figure>
-        </div>
-
-        <div class="content">
-          <p>
-            An in-house ERP system built for Busy Bee Montessori to manage daily school operations, student records, attendance, fees, and communication efficiently.
-          </p>
-          <ul>
-            <li>Built using Flask (Python) with Jinja2 templates and modular architecture.</li>
-            <li>Implemented CRUD for students, teachers, and fee modules with SQLite backend.</li>
-            <li>Designed responsive UI with Bootstrap and dynamic dashboards for admin and staff users.</li>
-          </ul>
-
-          <div class="tags mt-3">
-            <span class="tag is-info is-medium">
-              <span class="icon is-small mr-1">
-                <i class="fas fa-flask"></i>
-              </span>
-              Flask
-            </span>
-
-            <span class="tag is-info is-medium">
-              <span class="icon is-small mr-1">
-                <i class="fab fa-python"></i>
-              </span>
-              Python
-            </span>
-
-            <span class="tag is-info is-medium">
-              <span class="icon is-small mr-1">
-                <i class="fas fa-code"></i>
-              </span>
-              Jinja2
-            </span>
-
-            <span class="tag is-info is-medium">
-              <span class="icon is-small mr-1">
-                <i class="fas fa-database"></i>
-              </span>
-              SQLite
-            </span>
-
-            <span class="tag is-info is-medium">
-              <span class="icon is-small mr-1">
-                <i class="fab fa-bootstrap"></i>
-              </span>
-              Bootstrap
-            </span>
-
-            <span class="tag is-info is-medium">
-              <span class="icon is-small mr-1">
-                <i class="fas fa-industry"></i>
-              </span>
-              ERP
-            </span>
-          </div>
-      </section>
-      <footer class="modal-card-foot">
-        <button class="button is-success" onclick="document.getElementById('project-1-modal').classList.remove('is-active')">Close</button>
-      </footer>
-    </div>
-  </div>
-
-
-  <div id="project-2-modal" class="modal">
-    <div class="modal-background"></div>
-    <div class="modal-card">
-      <header class="modal-card-head">
-        <p class="modal-card-title">Institute ERP System</p>
-        <button class="delete has-background-dark" aria-label="close" onclick="document.getElementById('project-2-modal').classList.remove('is-active')"></button>
-      </header>
-      <section class="modal-card-body">
-
-        <div id="project-2-modal-carousel" class="carousel">
-          <figure class="image is-4by3 carousel-cell">
-            <img src="img/carousel/project2/1.png" style="object-fit: contain;" alt="ERP Dashboard Overview" onerror="this.onerror=null;this.src='img/fallback.png';">
-          </figure>
-          <figure class="image is-4by3 carousel-cell">
-            <img src="img/carousel/project2/2.png" style="object-fit: contain;" alt="User Management Interface" onerror="this.onerror=null;this.src='img/fallback.png';">
-          </figure>
-          <figure class="image is-4by3 carousel-cell">
-            <img src="img/carousel/project2/3.png" style="object-fit: contain;" alt="Attendance & Reporting Module" onerror="this.onerror=null;this.src='img/fallback.png';">
-          </figure>
-        </div>
-
-        <div class="content">
-
-          <div class="copyright-notice" style="margin: 2rem auto 0 auto; padding: 1rem 1.5rem; font-size: 0.85rem; color: none; text-align: center; font-style: italic; max-width: 90%;">
-            © 2025 — “Student Query Management System” under Institute ERP is a copyrighted work registered under Copyright Act, 1957 <br />
-            (Application No.: 11888/2025-CO/L | Date of Filing: 29/03/2025)
-          </div>
-
-          <p>
-            A comprehensive ERP platform designed for academic institutions. This project was built during my MSc and
-            addresses the challenges of managing staff, student data, attendance, and communication workflows.
-          </p>
-          <ul>
-            <li>Implemented modules for leave applications, bulk user registration, and internal ticketing.</li>
-            <li>Auto-generated attendance reports and notifications for parents and students.</li>
-            <li>Role-based dashboards for Admin, Faculty, Students, and Parents.</li>
-          </ul>
-
-          <div class="tags mt-3">
-            <span class="tag is-primary is-medium">
-              <span class="icon is-small mr-1">
-                <i class="fab fa-laravel"></i>
-              </span>
-              Laravel
-            </span>
-
-            <span class="tag is-primary is-medium">
-              <span class="icon is-small mr-1">
-                <i class="fab fa-php"></i>
-              </span>
-              PHP
-            </span>
-
-            <span class="tag is-primary is-medium">
-              <span class="icon is-small mr-1">
-                <i class="fas fa-database"></i>
-              </span>
-              MySQL
-            </span>
-
-            <span class="tag is-primary is-medium">
-              <span class="icon is-small mr-1">
-                <i class="fab fa-html5"></i>
-              </span>
-              HTML
-            </span>
-
-            <span class="tag is-primary is-medium">
-              <span class="icon is-small mr-1">
-                <i class="fab fa-js"></i>
-              </span>
-              JavaScript
-            </span>
-
-            <span class="tag is-primary is-medium">
-              <span class="icon is-small mr-1">
-                <i class="fab fa-css3-alt"></i>
-              </span>
-              CSS
-            </span>
-          </div>
-      </section>
-      <footer class="modal-card-foot">
-        <button class="button is-success" onclick="document.getElementById('project-2-modal').classList.remove('is-active')">Close</button>
-      </footer>
-    </div>
-  </div>
-
-
-  <div id="project-3-modal" class="modal">
-    <div class="modal-background"></div>
-    <div class="modal-card">
-      <header class="modal-card-head">
-        <p class="modal-card-title">GeoMapperX Mobile App</p>
-        <button class="delete has-background-dark" aria-label="close"></button>
-      </header>
-      <section class="modal-card-body">
-        <div id="project-3-modal-carousel" class="carousel">
-          <figure class="image is-4by3 carousel-cell">
-            <img src="img/carousel/project3/1.png" style="object-fit: contain;" alt="GeoMapperX App Screenshot 1">
-          </figure>
-          <figure class="image is-4by3 carousel-cell">
-            <img src="img/carousel/project3/2.png" style="object-fit: contain;"  alt="GeoMapperX App Screenshot 2">
-          </figure>
-          <figure class="image is-4by3 carousel-cell">
-            <img src="img/carousel/project3/3.png" style="object-fit: contain;" alt="GeoMapperX App Screenshot 3">
-          </figure>
-          <figure class="image is-4by3 carousel-cell">
-            <img src="img/carousel/project3/4.png" style="object-fit: contain;" alt="GeoMapperX App Screenshot 3">
-          </figure><figure class="image is-4by3 carousel-cell">
-            <img src="img/carousel/project3/5.png" style="object-fit: contain;" alt="GeoMapperX App Screenshot 3">
-          </figure><figure class="image is-4by3 carousel-cell">
-            <img src="img/carousel/project3/6.png" style="object-fit: contain;" alt="GeoMapperX App Screenshot 3">
-          </figure>
-        </div>
-
-        <div class="content">
-          <p>
-            GeoMapperX is a geospatial mobile application built using Android Studio and Flutter for Android devices. It integrates Firebase for real-time data management and provides farmers and agricultural managers with precise geolocation tracking and crop management features.
-          </p>
-          <p>
-            The app supports seamless synchronization with the web dashboard, ensuring up-to-date data visualization and management of geospatial information.
-          </p>
-          <div class="tags mt-3">
-            <span class="tag is-success is-medium">
-              <span class="icon is-small mr-1">
-                <i class="fas fa-mobile-alt"></i>
-              </span>
-              Android Studio
-            </span>
-
-            <span class="tag is-success is-medium">
-              <span class="icon is-small mr-1">
-                <i class="fas fa-layer-group"></i> <!-- Flutter doesn't have FA icon -->
-              </span>
-              Flutter
-            </span>
-
-            <span class="tag is-success is-medium">
-              <span class="icon is-small mr-1">
-                <i class="fas fa-fire"></i> <!-- Firebase alternative -->
-              </span>
-              Firebase
-            </span>
-
-            <span class="tag is-success is-medium">
-              <span class="icon is-small mr-1">
-                <i class="fas fa-globe"></i>
-              </span>
-              Geospatial
-            </span>
-
-            <span class="tag is-success is-medium">
-              <span class="icon is-small mr-1">
-                <i class="fas fa-mobile-alt"></i>
-              </span>
-              Mobile App
-            </span>
-          </div>
-          <p>
-            <a href="https://play.google.com/store/apps/details?id=com.inficom.geomapper&pcampaignid=web_share" target="_blank" rel="noopener noreferrer" class="button is-link mt-3">View on Google Play Store</a>
+    <main>
+      <!-- About -->
+      <section id="experience" class="py-16 max-w-4xl mx-auto bg-white">
+        <div class="container">
+          <h1 class="text-4xl font-bold mb-12 text-left">About Me</h1>
+          <hr />
+          <br />
+          <p class="content">
+            I'm <strong>Jonathan DPenha</strong>, a passionate
+            <strong>Full-Stack Developer</strong> and MSc Computer Applications
+            student. I specialize in building responsive, scalable applications
+            using technologies like <strong>Laravel</strong>,
+            <strong>Firebase</strong>, and <strong>JavaScript</strong>.
+            <br /><br />
+            I've contributed to real-world platforms such as
+            <strong>GeoMapperX</strong>, where I combined problem-solving with
+            clean, efficient code. I value collaboration, attention to detail,
+            and a mindset of continuous improvement. <br /><br />
+            I'm always eager to push boundaries and bring impactful digital
+            solutions to life.
           </p>
         </div>
       </section>
-      <footer class="modal-card-foot">
-        <button class="button is-success">Close</button>
-      </footer>
-    </div>
-  </div>
 
+      <!-- Experience -->
+      <section id="experience" class="py-16 max-w-4xl mx-auto bg-white">
+        <div class="container mx-auto px-4">
+          <h1 class="text-4xl font-bold mb-12 text-left">Experience</h1>
+          <hr />
+          <br /><br />
 
-  <div id="project-4-modal" class="modal">
-    <div class="modal-background"></div>
-    <div class="modal-card">
-      <header class="modal-card-head">
-        <p class="modal-card-title">GeoMapperX Web Application</p>
-        <button class="delete has-background-dark" aria-label="close"></button>
-      </header>
-      <section class="modal-card-body">
-        <div id="project-4-modal-carousel" class="carousel">
-          <figure class="image is-4by3 carousel-cell">
-            <img src="img/carousel/project4/1.png" style="object-fit: contain;" alt="GeoMapperX Web Screenshot 1">
-          </figure>
-          <figure class="image is-4by3 carousel-cell">
-            <img src="img/carousel/project4/2.png" style="object-fit: contain;" alt="GeoMapperX Web Screenshot 2">
-          </figure>
-          <figure class="image is-4by3 carousel-cell">
-            <img src="img/carousel/project4/3.png" style="object-fit: contain;" alt="GeoMapperX Web Screenshot 3">
-          </figure>
-        </div>
+          <div class="relative">
+            <div
+              class="border-l-4 border-blue-500 absolute left-1/2 transform -translate-x-1/2 h-full"
+            ></div>
 
-        <div class="content">
-          <p>
-            Developed backend logic in Laravel PHP for <a href="http://www.geomapperx.com/" target="_blank" rel="noopener noreferrer">GeoMapperX</a>, a geolocation-based platform that empowers farmers to track crop details and manage farm activities.
-          </p>
-          <ul>
-            <li>Integrated MySQL and Firebase Firestore for real-time data synchronization between web and mobile interfaces.</li>
-            <li>Enhanced the admin dashboard using Bootstrap to manage geospatial data and crop workflow processes.</li>
-            <li>Implemented responsive frontend interfaces for admin and field operators, supporting seamless data visualization and management.</li>
-            <li>Developed backend logic in Laravel PHP with MySQL and Firebase Firestore.</li>
-            <li>Enhanced dashboard UI using Bootstrap.</li>
-            <li>Designed responsive admin and mobile interfaces.</li>
-          </ul>
+            <!-- Inficom Solutions (2025) -->
+            <div
+              class="mb-16 flex flex-col md:flex-row-reverse items-center md:justify-between relative"
+            >
+              <div
+                class="hidden md:block absolute left-1/2 transform -translate-x-1/2 -top-6"
+              >
+                <span
+                  class="bg-white text-blue-600 font-semibold px-2 text-sm shadow rounded"
+                  >2025</span
+                >
+              </div>
 
-          <div class="tags mt-3">
-            <span class="tag is-link is-medium">
-              <span class="icon is-small mr-1">
-                <i class="fab fa-laravel"></i>
-              </span>
-              Laravel
-            </span>
+              <div class="w-full md:w-5/12" data-aos="fade-left">
+                <div
+                  class="bg-gray-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+                >
+                  <div class="flex items-center mb-3">
+                    <img
+                      src="img/company/inficom.png"
+                      class="w-12 h-12 mr-4 rounded"
+                      alt="Inficom logo"
+                    />
+                    <div>
+                      <h3 class="text-xl font-semibold">Inficom Solutions</h3>
+                      <p class="text-sm text-gray-600">
+                        Full Stack Developer Intern | Dec 2024 - May 2025
+                      </p>
+                    </div>
+                  </div>
+                  <p class="mb-2">
+                    Worked on GeoMapperX - a geolocation-based platform for
+                    agricultural management.
+                  </p>
+                  <ul class="list-disc list-inside text-sm text-gray-700 mb-2">
+                    <li>
+                      Developed backend logic in Laravel PHP, integrating MySQL
+                      and Firebase Firestore.
+                    </li>
+                    <li>Enhanced web dashboard using Bootstrap.</li>
+                    <li>
+                      Designed responsive frontend interfaces for admin and
+                      mobile apps.
+                    </li>
+                  </ul>
+                  <div class="flex flex-wrap gap-2 mt-3">
+                    <span
+                      class="bg-blue-200 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                      >Laravel</span
+                    >
+                    <span
+                      class="bg-blue-200 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                      >MySQL</span
+                    >
+                    <span
+                      class="bg-blue-200 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                      >Firebase</span
+                    >
+                    <span
+                      class="bg-blue-200 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                      >Bootstrap</span
+                    >
+                    <span
+                      class="bg-blue-200 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                      >Flutter</span
+                    >
+                    <span
+                      class="bg-blue-200 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                      >Android</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div
+                class="hidden md:block w-2 h-2 bg-blue-500 rounded-full z-10"
+              ></div>
+              <div class="w-full md:w-5/12" data-aos="fade-right"></div>
+            </div>
 
-            <span class="tag is-link is-medium">
-              <span class="icon is-small mr-1">
-                <i class="fab fa-php"></i>
-              </span>
-              PHP
-            </span>
+            <!-- Living Word Church (2024) -->
+            <div
+              class="mb-16 flex flex-col md:flex-row items-center md:justify-between relative"
+            >
+              <div
+                class="hidden md:block absolute left-1/2 transform -translate-x-1/2 -top-6"
+              >
+                <span
+                  class="bg-white text-blue-600 font-semibold px-2 text-sm shadow rounded"
+                  >2024</span
+                >
+              </div>
 
-            <span class="tag is-link is-medium">
-              <span class="icon is-small mr-1">
-                <i class="fas fa-database"></i>
-              </span>
-              MySQL
-            </span>
+              <div class="w-full md:w-5/12" data-aos="fade-right">
+                <div
+                  class="bg-gray-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+                >
+                  <div class="flex items-center mb-3">
+                    <img
+                      src="img/company/livingwordchurch.jpeg"
+                      class="w-12 h-12 mr-4 rounded"
+                      alt="Living Word Church logo"
+                    />
+                    <div>
+                      <h3 class="text-xl font-semibold">Living Word Church</h3>
+                      <p class="text-sm text-gray-600">
+                        Web Developer | Aug 2020 - Dec 2024
+                      </p>
+                    </div>
+                  </div>
+                  <p class="mb-2">
+                    Managed and improved the church’s website infrastructure and
+                    server setup.
+                  </p>
+                  <ul class="list-disc list-inside text-sm text-gray-700 mb-2">
+                    <li>Reviewed and updated website content regularly.</li>
+                    <li>Improved performance through optimization.</li>
+                    <li>
+                      Managed Zoho mail servers and WordPress maintenance.
+                    </li>
+                  </ul>
+                  <div class="flex flex-wrap gap-2 mt-3">
+                    <span
+                      class="bg-blue-200 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                      >WordPress</span
+                    >
+                    <span
+                      class="bg-blue-200 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                      >Server Management</span
+                    >
+                    <span
+                      class="bg-blue-200 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                      >Zoho</span
+                    >
+                    <span
+                      class="bg-blue-200 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                      >Web Performance</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div
+                class="hidden md:block w-2 h-2 bg-blue-500 rounded-full z-10"
+              ></div>
+              <div class="w-full md:w-5/12" data-aos="fade-left"></div>
+            </div>
 
-            <span class="tag is-link is-medium">
-              <span class="icon is-small mr-1">
-                <i class="fas fa-fire"></i>
-              </span>
-              Firebase
-            </span>
+            <!-- St. Andrew's College (2023) -->
+            <div
+              class="mb-16 flex flex-col md:flex-row-reverse items-center md:justify-between relative"
+            >
+              <div
+                class="hidden md:block absolute left-1/2 transform -translate-x-1/2 -top-6"
+              >
+                <span
+                  class="bg-white text-blue-600 font-semibold px-2 text-sm shadow rounded"
+                  >2023</span
+                >
+              </div>
 
-            <span class="tag is-link is-medium">
-              <span class="icon is-small mr-1">
-                <i class="fab fa-bootstrap"></i>
-              </span>
-              Bootstrap
-            </span>
+              <div class="w-full md:w-5/12" data-aos="fade-left">
+                <div
+                  class="bg-gray-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+                >
+                  <div class="flex items-center mb-3">
+                    <img
+                      src="img/company/andrews.jpeg"
+                      class="w-12 h-12 mr-4 rounded"
+                      alt="St. Andrew's logo"
+                    />
+                    <div>
+                      <h3 class="text-xl font-semibold">
+                        St. Andrew's College
+                      </h3>
+                      <p class="text-sm text-gray-600">
+                        Web Developer Intern | Nov 2021 - Mar 2023
+                      </p>
+                    </div>
+                  </div>
+                  <p class="mb-2">
+                    Built and maintained the college’s website to support
+                    academic and administrative needs.
+                  </p>
+                  <ul class="list-disc list-inside text-sm text-gray-700 mb-2">
+                    <li>
+                      Maintained and updated WordPress website content and
+                      interface design.
+                    </li>
+                    <li>
+                      Improved functionality and usability based on feedback and
+                      analytics.
+                    </li>
+                    <li>
+                      Tested and debugged features for cross-platform
+                      performance.
+                    </li>
+                  </ul>
+                  <div class="flex flex-wrap gap-2 mt-3">
+                    <span
+                      class="bg-blue-200 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                      >WordPress</span
+                    >
+                    <span
+                      class="bg-blue-200 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                      >Web Testing</span
+                    >
+                    <span
+                      class="bg-blue-200 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                      >UI/UX</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div
+                class="hidden md:block w-2 h-2 bg-blue-500 rounded-full z-10"
+              ></div>
+              <div class="w-full md:w-5/12" data-aos="fade-right"></div>
+            </div>
 
-            <span class="tag is-link is-medium">
-              <span class="icon is-small mr-1">
-                <i class="fas fa-globe"></i>
-              </span>
-              Geospatial
-            </span>
+            <!-- Wizcraft International (2021) -->
+            <div
+              class="mb-16 flex flex-col md:flex-row items-center md:justify-between relative"
+            >
+              <div
+                class="hidden md:block absolute left-1/2 transform -translate-x-1/2 -top-6"
+              >
+                <span
+                  class="bg-white text-blue-600 font-semibold px-2 text-sm shadow rounded"
+                  >2021</span
+                >
+              </div>
+
+              <div class="w-full md:w-5/12" data-aos="fade-right">
+                <div
+                  class="bg-gray-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+                >
+                  <div class="flex items-center mb-3">
+                    <img
+                      src="img/company/wizcraft.jpeg"
+                      class="w-12 h-12 mr-4 rounded"
+                      alt="Wizcraft logo"
+                    />
+                    <div>
+                      <h3 class="text-xl font-semibold">
+                        Wizcraft International
+                      </h3>
+                      <p class="text-sm text-gray-600">
+                        Junior Software Engineer | Sep 2020 - Nov 2021
+                      </p>
+                    </div>
+                  </div>
+                  <p class="mb-2">
+                    Worked on developing internal tools and automations for
+                    event management operations.
+                  </p>
+                  <ul class="list-disc list-inside text-sm text-gray-700 mb-2">
+                    <li>
+                      Built web applications using Python, PHP, JavaScript,
+                      HTML, and CSS.
+                    </li>
+                    <li>
+                      Maintained automation scripts for internal workflows.
+                    </li>
+                    <li>Troubleshot and optimized backend logic.</li>
+                  </ul>
+                  <div class="flex flex-wrap gap-2 mt-3">
+                    <span
+                      class="bg-blue-200 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                      >Python</span
+                    >
+                    <span
+                      class="bg-blue-200 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                      >PHP</span
+                    >
+                    <span
+                      class="bg-blue-200 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                      >Automation</span
+                    >
+                    <span
+                      class="bg-blue-200 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                      >JavaScript</span
+                    >
+                    <span
+                      class="bg-blue-200 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                      >Debugging</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div
+                class="hidden md:block w-2 h-2 bg-blue-500 rounded-full z-10"
+              ></div>
+              <div class="w-full md:w-5/12" data-aos="fade-left"></div>
+            </div>
           </div>
         </div>
       </section>
-      <footer class="modal-card-foot">
-        <button class="button is-success">Close</button>
-      </footer>
-    </div>
-  </div>
 
-  <div id="project-5-modal" class="modal">
-    <div class="modal-background"></div>
-    <div class="modal-card">
-      <header class="modal-card-head">
-        <p class="modal-card-title">Counselling with Arleen Dias - Portfolio CMS</p>
-        <button class="delete has-background-dark" aria-label="close"></button>
-      </header>
-      <section class="modal-card-body">
-        <div id="project-5-modal-carousel" class="carousel">
-          <figure class="image is-4by3 carousel-cell">
-            <img src="img/carousel/arleen-1.png" style="object-fit: contain;" alt="Counselling Website Screenshot 1">
-          </figure>
-          <figure class="image is-4by3 carousel-cell">
-            <img src="img/carousel/arleen-2.png" style="object-fit: contain;" alt="Counselling Website Screenshot 2">
-          </figure>
-          <figure class="image is-4by3 carousel-cell">
-            <img src="img/carousel/arleen-3.png" style="object-fit: contain;" alt="Counselling Website Screenshot 3">
-          </figure>
-        </div>
+      <!-- Projects Section -->
+      <section id="projects" class="py-16 bg-white-50 max-w-7xl mx-auto">
+        <div class="container mx-auto px-4">
+          <h1 class="text-4xl font-bold text-center mb-12">Projects</h1>
+          <hr class="mb-8" />
 
-        <div class="content">
-          <p>
-            Developed a dynamic, CMS-based portfolio website for a professional therapist using Laravel. 
-            The platform allows real-time content management, enabling non-technical users to update various 
-            sections of the site — including testimonials, blog posts, services, and more — without touching the code.
-          </p>
-          <ul>
-            <li>Built using Laravel Blade templating engine for maintainable and structured code.</li>
-            <li>Integrated custom admin panel for dynamic content management and control.</li>
-            <li>Optimized for SEO, responsive design, and fast performance across devices.</li>
-          </ul>
+          <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+            <!-- Template for Each Project -->
+            <!-- Repeat this for each project and change content accordingly -->
+            <div
+              class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col"
+              data-aos="fade-up"
+            >
+              <img
+                class="modal-trigger rounded-t-md cursor-pointer w-full h-48 object-contain"
+                data-target="project-1-modal"
+                src="img/project-1-cover.png"
+                alt="BusyBees Montessori School"
+              />
+              <div class="p-4 flex-grow flex items-end">
+                <h2 class="text-lg font-semibold text-center w-full">
+                  BusyBees Montessori School
+                </h2>
+              </div>
+            </div>
 
-          <div class="tags mt-3">
-            <span class="tag is-warning is-medium">
-              <span class="icon is-small mr-1">
-                <i class="fab fa-laravel"></i>
-              </span>
-              Laravel
-            </span>
+            <!-- Repeat for all other projects with different src/alt/target -->
+            <div
+              class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <img
+                class="modal-trigger rounded-t-md cursor-pointer w-full h-48 object-contain"
+                data-target="project-2-modal"
+                src="img/project-2-cover.png"
+                alt="Institute ERP System"
+              />
+              <div class="p-4 flex-grow flex items-end">
+                <h2 class="text-lg font-semibold text-center w-full">
+                  Institute ERP System
+                </h2>
+              </div>
+            </div>
 
-            <span class="tag is-warning is-medium">
-              <span class="icon is-small mr-1">
-                <i class="fab fa-php"></i>
-              </span>
-              PHP
-            </span>
+            <div
+              class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <img
+                class="modal-trigger rounded-t-md cursor-pointer w-full h-48 object-contain"
+                data-target="project-3-modal"
+                src="img/project-3-cover.png"
+                alt="GeoMapperX - Mobile App"
+              />
+              <div class="p-4 flex-grow flex items-end">
+                <h2 class="text-lg font-semibold text-center w-full">
+                  GeoMapperX - Mobile App
+                </h2>
+              </div>
+            </div>
 
-            <span class="tag is-warning is-medium">
-              <span class="icon is-small mr-1">
-                <i class="fas fa-edit"></i>
-              </span>
-              CMS
-            </span>
+            <div
+              class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <img
+                class="modal-trigger rounded-t-md cursor-pointer w-full h-48 object-contain"
+                data-target="project-4-modal"
+                src="img/project-4-cover.png"
+                alt="GeoMapperX - Web App"
+              />
+              <div class="p-4 flex-grow flex items-end">
+                <h2 class="text-lg font-semibold text-center w-full">
+                  GeoMapperX - Web App
+                </h2>
+              </div>
+            </div>
 
-            <span class="tag is-warning is-medium">
-              <span class="icon is-small mr-1">
-                <i class="fas fa-code"></i>
-              </span>
-              Blade
-            </span>
+            <div
+              class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <img
+                class="modal-trigger rounded-t-md cursor-pointer w-full h-48 object-contain"
+                data-target="project-5-modal"
+                src="img/project-5-cover.png"
+                alt="Counselling With Arleen Dias"
+              />
+              <div class="p-4 flex-grow flex items-end">
+                <h2 class="text-lg font-semibold text-center w-full">
+                  Counselling With Arleen Dias
+                </h2>
+              </div>
+            </div>
 
-            <span class="tag is-warning is-medium">
-              <span class="icon is-small mr-1">
-                <i class="fas fa-mobile-alt"></i>
-              </span>
-              Responsive Design
-            </span>
+            <div
+              class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col"
+              data-aos="fade-up"
+              data-aos-delay="500"
+            >
+              <img
+                class="modal-trigger rounded-t-md cursor-pointer w-full h-48 object-contain"
+                data-target="project-6-modal"
+                src="img/project-6-cover.png"
+                alt="Science Transactions (OJS)"
+              />
+              <div class="p-4 flex-grow flex items-end">
+                <h2 class="text-lg font-semibold text-center w-full">
+                  Science Transactions (OJS)
+                </h2>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-      <footer class="modal-card-foot">
-        <button class="button is-success">Close</button>
-      </footer>
-    </div>
-  </div>
 
+      <!-- Education -->
+      <section id="education" class="py-16 bg-white-50 max-w-4xl mx-auto">
+        <div class="container mx-auto px-4">
+          <h1 class="text-4xl font-bold text-left mb-12">Education</h1>
+          <hr />
+          <br />
 
-  <div id="project-6-modal" class="modal">
-    <div class="modal-background"></div>
-    <div class="modal-card">
-      <header class="modal-card-head">
-        <p class="modal-card-title">Science Transactions – Journal Management System</p>
-        <button class="delete has-background-dark" aria-label="close"></button>
-      </header>
-      <section class="modal-card-body">
-        <div id="project-6-modal-carousel" class="carousel">
-          <figure class="image is-4by3 carousel-cell">
-            <img src="img/carousel/project6/1.png" style="object-fit: contain;" alt="Science Transactions Home">
-          </figure>
-          <figure class="image is-4by3 carousel-cell">
-            <img src="img/carousel/project6/2.png" style="object-fit: contain;" alt="IJASCIS Journal">
-          </figure>
-          <figure class="image is-4by3 carousel-cell">
-            <img src="img/carousel/project6/3.png" style="object-fit: contain;" alt="GeoAI Journal">
-          </figure>
-        </div>
+          <!-- MSc (Computer Applications) -->
+          <div class="card anim hover-card mb-6" data-aos="fade-up">
+            <div class="card-content">
+              <div class="media is-flex-wrap-wrap">
+                <div class="media-left">
+                  <figure class="image is-48x48">
+                    <img
+                      src="img/education/SICSR.png"
+                      alt="Symbiosis logo"
+                      onerror="this.onerror=null;this.src='https://cdn-icons-png.flaticon.com/512/3176/3176364.png';"
+                    />
+                  </figure>
+                </div>
+                <div class="media-content">
+                  <div class="block">
+                    <p class="title is-5 mb-0">
+                      Symbiosis Institute of Computer Studies and Research
+                    </p>
+                    <p class="subtitle is-6 has-text-grey mt-1">
+                      MSc in Computer Applications —
+                      <time datetime="2023-07">Jul 2023</time> –
+                      <time datetime="2025-05">May 2025</time>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="content mt-3">
+                <p>
+                  Specialization in Software Development<br />Focused on full
+                  stack development, OOP, database management, and real-world
+                  software project experience.
+                </p>
+                <ul class="mt-3">
+                  <li>📊 CGPA: 8.65 (Sem 1: 7.89, Sem 2: 8.98, Sem 3: 9.08)</li>
+                  <li>🏆 Scholarships for 2nd rank in Sem 2 & 3</li>
+                </ul>
+              </div>
+            </div>
+          </div>
 
-        <div class="content">
-          <p>
-            Developed and customized an Open Journal Systems (OJS)-based platform for <strong><a href="https://sciencetransactions.com/" target="_blank">Science Transactions</a></strong>, 
-            a scholarly journal portal hosting multiple publications including 
-            <a href="https://sciencetransactions.com/index.php/ijascis/" target="_blank">IJASCIS</a> and 
-            <a href="https://sciencetransactions.com/index.php/geoai/" target="_blank">GeoAI</a>.
-          </p>
-          <ul>
-            <li>Handled the setup, configuration, and customization of the OJS framework for academic publishing workflows.</li>
-            <li>Created unique journal identities and landing pages for each publication within the multi-journal platform.</li>
-            <li>Ensured responsive design and optimized performance for seamless user experience across devices.</li>
-            <li>Integrated editorial workflows, manuscript submission, and peer-review systems tailored to journal requirements.</li>
-          </ul>
-
-          <div class="tags mt-3">
-            <span class="tag is-dark is-medium">
-              <span class="icon is-small mr-1">
-                <i class="fas fa-book-open"></i>
-              </span>
-              Open Journal Systems
-            </span>
-
-            <span class="tag is-dark is-medium">
-              <span class="icon is-small mr-1">
-                <i class="fab fa-php"></i>
-              </span>
-              PHP
-            </span>
-
-            <span class="tag is-dark is-medium">
-              <span class="icon is-small mr-1">
-                <i class="fas fa-book"></i>
-              </span>
-              OJS
-            </span>
-
-            <span class="tag is-dark is-medium">
-              <span class="icon is-small mr-1">
-                <i class="fas fa-university"></i>
-              </span>
-              Academic Journals
-            </span>
-
-            <span class="tag is-dark is-medium">
-              <span class="icon is-small mr-1">
-                <i class="fas fa-newspaper"></i>
-              </span>
-              Publishing CMS
-            </span>
+          <!-- BSc (IT) -->
+          <div
+            class="card anim hover-card"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="card-content">
+              <div class="media is-flex-wrap-wrap">
+                <div class="media-left">
+                  <figure class="image is-48x48">
+                    <img
+                      src="img/education/andrews.jpeg"
+                      alt="St. Andrew's logo"
+                      onerror="this.onerror=null;this.src='https://cdn-icons-png.flaticon.com/512/3176/3176364.png';"
+                    />
+                  </figure>
+                </div>
+                <div class="media-content">
+                  <div class="block">
+                    <p class="title is-5 mb-0">
+                      St. Andrew's College of Arts, Science and Commerce, Mumbai
+                    </p>
+                    <p class="subtitle is-6 has-text-grey mt-1">
+                      BSc in Information Technology —
+                      <time datetime="2020-06">Jun 2020</time> –
+                      <time datetime="2023-06">Jun 2023</time>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="content mt-3">
+                <p>
+                  Gained strong foundation in programming, databases, and web
+                  technologies.
+                </p>
+                <ul class="mt-3">
+                  <li>🎓 GPA: 9.17</li>
+                  <li>
+                    💻 Led college tech fest website; active in tech events
+                  </li>
+                  <li>
+                    🏀 Secured 2nd place in District-level Basketball Tournament
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-      <footer class="modal-card-foot">
-        <button class="button is-success">Close</button>
-      </footer>
+    </main>
+
+    <section id="contact" class="py-16 bg-white-50 max-w-4xl mx-auto">
+      <div class="container mx-auto px-4">
+        <h1 class="text-2xl font-bold text-center mb-12">Get in touch</h1>
+        <hr />
+        <nav class="level">
+          <div class="level-item has-text-centered">
+            <div>
+              <a
+                href="https://github.com/jonathandpenha1"
+                class="icon is-large"
+              >
+                <i class="fab fa-2x fa-github"></i>
+              </a>
+              <p class="heading">
+                <a href="https://github.com/jonathandpenha1"
+                  >github.com/jonathandpenha1</a
+                >
+              </p>
+            </div>
+          </div>
+          <div class="level-item has-text-centered">
+            <div>
+              <a href="mailto:dpenhajonathan@gmail.com" class="icon is-large">
+                <i class="fas fa-2x fa-envelope"></i>
+              </a>
+              <p class="heading">
+                <a href="mailto:dpenhajonathan@gmail.com"
+                  >dpenhajonathan@gmail.com</a
+                >
+              </p>
+            </div>
+          </div>
+          <div class="level-item has-text-centered">
+            <div>
+              <a
+                href="https://www.linkedin.com/in/jonathan-dpenha/"
+                class="icon is-large"
+              >
+                <i class="fab fa-2x fa-linkedin-in"></i>
+              </a>
+              <p class="heading">
+                <a href="https://www.linkedin.com/in/jonathan-dpenha/"
+                  >linkedin</a
+                >
+              </p>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </section>
+
+    <!-- Modals -->
+    <div id="project-1-modal" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">Busy Bee Montessori ERP System</p>
+          <button
+            class="delete has-background-dark"
+            aria-label="close"
+            onclick="document.getElementById('project-1-modal').classList.remove('is-active')"
+          ></button>
+        </header>
+        <section class="modal-card-body">
+          <div id="project-1-modal-carousel" class="carousel">
+            <figure class="image is-4by3 carousel-cell">
+              <img
+                src="img/carousel/project1/1.png"
+                style="object-fit: contain"
+                alt="Dashboard view"
+                onerror="this.onerror=null;this.src='img/fallback.png';"
+              />
+            </figure>
+            <figure class="image is-4by3 carousel-cell">
+              <img
+                src="img/carousel/project1/2.png"
+                style="object-fit: contain"
+                alt="Student records"
+                onerror="this.onerror=null;this.src='img/fallback.png';"
+              />
+            </figure>
+            <figure class="image is-4by3 carousel-cell">
+              <img
+                src="img/carousel/project1/3.png"
+                style="object-fit: contain"
+                alt="Fee management module"
+                onerror="this.onerror=null;this.src='img/fallback.png';"
+              />
+            </figure>
+          </div>
+
+          <div class="content">
+            <p>
+              An in-house ERP system built for Busy Bee Montessori to manage
+              daily school operations, student records, attendance, fees, and
+              communication efficiently.
+            </p>
+            <ul>
+              <li>
+                Built using Flask (Python) with Jinja2 templates and modular
+                architecture.
+              </li>
+              <li>
+                Implemented CRUD for students, teachers, and fee modules with
+                SQLite backend.
+              </li>
+              <li>
+                Designed responsive UI with Bootstrap and dynamic dashboards for
+                admin and staff users.
+              </li>
+            </ul>
+
+            <div class="tags mt-3">
+              <span class="tag is-info is-medium">
+                <span class="icon is-small mr-1">
+                  <i class="fas fa-flask"></i>
+                </span>
+                Flask
+              </span>
+
+              <span class="tag is-info is-medium">
+                <span class="icon is-small mr-1">
+                  <i class="fab fa-python"></i>
+                </span>
+                Python
+              </span>
+
+              <span class="tag is-info is-medium">
+                <span class="icon is-small mr-1">
+                  <i class="fas fa-code"></i>
+                </span>
+                Jinja2
+              </span>
+
+              <span class="tag is-info is-medium">
+                <span class="icon is-small mr-1">
+                  <i class="fas fa-database"></i>
+                </span>
+                SQLite
+              </span>
+
+              <span class="tag is-info is-medium">
+                <span class="icon is-small mr-1">
+                  <i class="fab fa-bootstrap"></i>
+                </span>
+                Bootstrap
+              </span>
+
+              <span class="tag is-info is-medium">
+                <span class="icon is-small mr-1">
+                  <i class="fas fa-industry"></i>
+                </span>
+                ERP
+              </span>
+            </div>
+          </div>
+        </section>
+        <footer class="modal-card-foot">
+          <button
+            class="button is-success"
+            onclick="document.getElementById('project-1-modal').classList.remove('is-active')"
+          >
+            Close
+          </button>
+        </footer>
+      </div>
     </div>
-  </div>
 
+    <div id="project-2-modal" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">Institute ERP System</p>
+          <button
+            class="delete has-background-dark"
+            aria-label="close"
+            onclick="document.getElementById('project-2-modal').classList.remove('is-active')"
+          ></button>
+        </header>
+        <section class="modal-card-body">
+          <div id="project-2-modal-carousel" class="carousel">
+            <figure class="image is-4by3 carousel-cell">
+              <img
+                src="img/carousel/project2/1.png"
+                style="object-fit: contain"
+                alt="ERP Dashboard Overview"
+                onerror="this.onerror=null;this.src='img/fallback.png';"
+              />
+            </figure>
+            <figure class="image is-4by3 carousel-cell">
+              <img
+                src="img/carousel/project2/2.png"
+                style="object-fit: contain"
+                alt="User Management Interface"
+                onerror="this.onerror=null;this.src='img/fallback.png';"
+              />
+            </figure>
+            <figure class="image is-4by3 carousel-cell">
+              <img
+                src="img/carousel/project2/3.png"
+                style="object-fit: contain"
+                alt="Attendance & Reporting Module"
+                onerror="this.onerror=null;this.src='img/fallback.png';"
+              />
+            </figure>
+          </div>
 
-  <footer class="footer">
-    <div class="content has-text-centered">
-      <p>
-        <a href="https://github.com/jonathandpenha1" target="_blank" class="icon has-text-primary">
-          <i class="fab fa-github"></i> <strong>jonathan</strong></a>
-      </p>
+          <div class="content">
+            <div
+              class="copyright-notice"
+              style="
+                margin: 2rem auto 0 auto;
+                padding: 1rem 1.5rem;
+                font-size: 0.85rem;
+                color: none;
+                text-align: center;
+                font-style: italic;
+                max-width: 90%;
+              "
+            >
+              © 2025 — “Student Query Management System” under Institute ERP is
+              a copyrighted work registered under Copyright Act, 1957 <br />
+              (Application No.: 11888/2025-CO/L | Date of Filing: 29/03/2025)
+            </div>
+
+            <p>
+              A comprehensive ERP platform designed for academic institutions.
+              This project was built during my MSc and addresses the challenges
+              of managing staff, student data, attendance, and communication
+              workflows.
+            </p>
+            <ul>
+              <li>
+                Implemented modules for leave applications, bulk user
+                registration, and internal ticketing.
+              </li>
+              <li>
+                Auto-generated attendance reports and notifications for parents
+                and students.
+              </li>
+              <li>
+                Role-based dashboards for Admin, Faculty, Students, and Parents.
+              </li>
+            </ul>
+
+            <div class="tags mt-3">
+              <span class="tag is-primary is-medium">
+                <span class="icon is-small mr-1">
+                  <i class="fab fa-laravel"></i>
+                </span>
+                Laravel
+              </span>
+
+              <span class="tag is-primary is-medium">
+                <span class="icon is-small mr-1">
+                  <i class="fab fa-php"></i>
+                </span>
+                PHP
+              </span>
+
+              <span class="tag is-primary is-medium">
+                <span class="icon is-small mr-1">
+                  <i class="fas fa-database"></i>
+                </span>
+                MySQL
+              </span>
+
+              <span class="tag is-primary is-medium">
+                <span class="icon is-small mr-1">
+                  <i class="fab fa-html5"></i>
+                </span>
+                HTML
+              </span>
+
+              <span class="tag is-primary is-medium">
+                <span class="icon is-small mr-1">
+                  <i class="fab fa-js"></i>
+                </span>
+                JavaScript
+              </span>
+
+              <span class="tag is-primary is-medium">
+                <span class="icon is-small mr-1">
+                  <i class="fab fa-css3-alt"></i>
+                </span>
+                CSS
+              </span>
+            </div>
+          </div>
+        </section>
+        <footer class="modal-card-foot">
+          <button
+            class="button is-success"
+            onclick="document.getElementById('project-2-modal').classList.remove('is-active')"
+          >
+            Close
+          </button>
+        </footer>
+      </div>
     </div>
-  </footer>
 
-  <script src="js/bundle.js"></script>
+    <div id="project-3-modal" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">GeoMapperX Mobile App</p>
+          <button
+            class="delete has-background-dark"
+            aria-label="close"
+          ></button>
+        </header>
+        <section class="modal-card-body">
+          <div id="project-3-modal-carousel" class="carousel">
+            <figure class="image is-4by3 carousel-cell">
+              <img
+                src="img/carousel/project3/1.png"
+                style="object-fit: contain"
+                alt="GeoMapperX App Screenshot 1"
+              />
+            </figure>
+            <figure class="image is-4by3 carousel-cell">
+              <img
+                src="img/carousel/project3/2.png"
+                style="object-fit: contain"
+                alt="GeoMapperX App Screenshot 2"
+              />
+            </figure>
+            <figure class="image is-4by3 carousel-cell">
+              <img
+                src="img/carousel/project3/3.png"
+                style="object-fit: contain"
+                alt="GeoMapperX App Screenshot 3"
+              />
+            </figure>
+            <figure class="image is-4by3 carousel-cell">
+              <img
+                src="img/carousel/project3/4.png"
+                style="object-fit: contain"
+                alt="GeoMapperX App Screenshot 3"
+              />
+            </figure>
+            <figure class="image is-4by3 carousel-cell">
+              <img
+                src="img/carousel/project3/5.png"
+                style="object-fit: contain"
+                alt="GeoMapperX App Screenshot 3"
+              />
+            </figure>
+            <figure class="image is-4by3 carousel-cell">
+              <img
+                src="img/carousel/project3/6.png"
+                style="object-fit: contain"
+                alt="GeoMapperX App Screenshot 3"
+              />
+            </figure>
+          </div>
+
+          <div class="content">
+            <p>
+              GeoMapperX is a geospatial mobile application built using Android
+              Studio and Flutter for Android devices. It integrates Firebase for
+              real-time data management and provides farmers and agricultural
+              managers with precise geolocation tracking and crop management
+              features.
+            </p>
+            <p>
+              The app supports seamless synchronization with the web dashboard,
+              ensuring up-to-date data visualization and management of
+              geospatial information.
+            </p>
+            <div class="tags mt-3">
+              <span class="tag is-success is-medium">
+                <span class="icon is-small mr-1">
+                  <i class="fas fa-mobile-alt"></i>
+                </span>
+                Android Studio
+              </span>
+
+              <span class="tag is-success is-medium">
+                <span class="icon is-small mr-1">
+                  <i class="fas fa-layer-group"></i>
+                  <!-- Flutter doesn't have FA icon -->
+                </span>
+                Flutter
+              </span>
+
+              <span class="tag is-success is-medium">
+                <span class="icon is-small mr-1">
+                  <i class="fas fa-fire"></i>
+                  <!-- Firebase alternative -->
+                </span>
+                Firebase
+              </span>
+
+              <span class="tag is-success is-medium">
+                <span class="icon is-small mr-1">
+                  <i class="fas fa-globe"></i>
+                </span>
+                Geospatial
+              </span>
+
+              <span class="tag is-success is-medium">
+                <span class="icon is-small mr-1">
+                  <i class="fas fa-mobile-alt"></i>
+                </span>
+                Mobile App
+              </span>
+            </div>
+            <p>
+              <a
+                href="https://play.google.com/store/apps/details?id=com.inficom.geomapper&pcampaignid=web_share"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button is-link mt-3"
+                >View on Google Play Store</a
+              >
+            </p>
+          </div>
+        </section>
+        <footer class="modal-card-foot">
+          <button class="button is-success">Close</button>
+        </footer>
+      </div>
+    </div>
+
+    <div id="project-4-modal" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">GeoMapperX Web Application</p>
+          <button
+            class="delete has-background-dark"
+            aria-label="close"
+          ></button>
+        </header>
+        <section class="modal-card-body">
+          <div id="project-4-modal-carousel" class="carousel">
+            <figure class="image is-4by3 carousel-cell">
+              <img
+                src="img/carousel/project4/1.png"
+                style="object-fit: contain"
+                alt="GeoMapperX Web Screenshot 1"
+              />
+            </figure>
+            <figure class="image is-4by3 carousel-cell">
+              <img
+                src="img/carousel/project4/2.png"
+                style="object-fit: contain"
+                alt="GeoMapperX Web Screenshot 2"
+              />
+            </figure>
+            <figure class="image is-4by3 carousel-cell">
+              <img
+                src="img/carousel/project4/3.png"
+                style="object-fit: contain"
+                alt="GeoMapperX Web Screenshot 3"
+              />
+            </figure>
+          </div>
+
+          <div class="content">
+            <p>
+              Developed backend logic in Laravel PHP for
+              <a
+                href="http://www.geomapperx.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GeoMapperX</a
+              >, a geolocation-based platform that empowers farmers to track
+              crop details and manage farm activities.
+            </p>
+            <ul>
+              <li>
+                Integrated MySQL and Firebase Firestore for real-time data
+                synchronization between web and mobile interfaces.
+              </li>
+              <li>
+                Enhanced the admin dashboard using Bootstrap to manage
+                geospatial data and crop workflow processes.
+              </li>
+              <li>
+                Implemented responsive frontend interfaces for admin and field
+                operators, supporting seamless data visualization and
+                management.
+              </li>
+              <li>
+                Developed backend logic in Laravel PHP with MySQL and Firebase
+                Firestore.
+              </li>
+              <li>Enhanced dashboard UI using Bootstrap.</li>
+              <li>Designed responsive admin and mobile interfaces.</li>
+            </ul>
+
+            <div class="tags mt-3">
+              <span class="tag is-link is-medium">
+                <span class="icon is-small mr-1">
+                  <i class="fab fa-laravel"></i>
+                </span>
+                Laravel
+              </span>
+
+              <span class="tag is-link is-medium">
+                <span class="icon is-small mr-1">
+                  <i class="fab fa-php"></i>
+                </span>
+                PHP
+              </span>
+
+              <span class="tag is-link is-medium">
+                <span class="icon is-small mr-1">
+                  <i class="fas fa-database"></i>
+                </span>
+                MySQL
+              </span>
+
+              <span class="tag is-link is-medium">
+                <span class="icon is-small mr-1">
+                  <i class="fas fa-fire"></i>
+                </span>
+                Firebase
+              </span>
+
+              <span class="tag is-link is-medium">
+                <span class="icon is-small mr-1">
+                  <i class="fab fa-bootstrap"></i>
+                </span>
+                Bootstrap
+              </span>
+
+              <span class="tag is-link is-medium">
+                <span class="icon is-small mr-1">
+                  <i class="fas fa-globe"></i>
+                </span>
+                Geospatial
+              </span>
+            </div>
+          </div>
+        </section>
+        <footer class="modal-card-foot">
+          <button class="button is-success">Close</button>
+        </footer>
+      </div>
+    </div>
+
+    <div id="project-5-modal" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">
+            Counselling with Arleen Dias - Portfolio CMS
+          </p>
+          <button
+            class="delete has-background-dark"
+            aria-label="close"
+          ></button>
+        </header>
+        <section class="modal-card-body">
+          <div id="project-5-modal-carousel" class="carousel">
+            <figure class="image is-4by3 carousel-cell">
+              <img
+                src="img/carousel/arleen-1.png"
+                style="object-fit: contain"
+                alt="Counselling Website Screenshot 1"
+              />
+            </figure>
+            <figure class="image is-4by3 carousel-cell">
+              <img
+                src="img/carousel/arleen-2.png"
+                style="object-fit: contain"
+                alt="Counselling Website Screenshot 2"
+              />
+            </figure>
+            <figure class="image is-4by3 carousel-cell">
+              <img
+                src="img/carousel/arleen-3.png"
+                style="object-fit: contain"
+                alt="Counselling Website Screenshot 3"
+              />
+            </figure>
+          </div>
+
+          <div class="content">
+            <p>
+              Developed a dynamic, CMS-based portfolio website for a
+              professional therapist using Laravel. The platform allows
+              real-time content management, enabling non-technical users to
+              update various sections of the site — including testimonials, blog
+              posts, services, and more — without touching the code.
+            </p>
+            <ul>
+              <li>
+                Built using Laravel Blade templating engine for maintainable and
+                structured code.
+              </li>
+              <li>
+                Integrated custom admin panel for dynamic content management and
+                control.
+              </li>
+              <li>
+                Optimized for SEO, responsive design, and fast performance
+                across devices.
+              </li>
+            </ul>
+
+            <div class="tags mt-3">
+              <span class="tag is-warning is-medium">
+                <span class="icon is-small mr-1">
+                  <i class="fab fa-laravel"></i>
+                </span>
+                Laravel
+              </span>
+
+              <span class="tag is-warning is-medium">
+                <span class="icon is-small mr-1">
+                  <i class="fab fa-php"></i>
+                </span>
+                PHP
+              </span>
+
+              <span class="tag is-warning is-medium">
+                <span class="icon is-small mr-1">
+                  <i class="fas fa-edit"></i>
+                </span>
+                CMS
+              </span>
+
+              <span class="tag is-warning is-medium">
+                <span class="icon is-small mr-1">
+                  <i class="fas fa-code"></i>
+                </span>
+                Blade
+              </span>
+
+              <span class="tag is-warning is-medium">
+                <span class="icon is-small mr-1">
+                  <i class="fas fa-mobile-alt"></i>
+                </span>
+                Responsive Design
+              </span>
+            </div>
+          </div>
+        </section>
+        <footer class="modal-card-foot">
+          <button class="button is-success">Close</button>
+        </footer>
+      </div>
+    </div>
+
+    <div id="project-6-modal" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">
+            Science Transactions – Journal Management System
+          </p>
+          <button
+            class="delete has-background-dark"
+            aria-label="close"
+          ></button>
+        </header>
+        <section class="modal-card-body">
+          <div id="project-6-modal-carousel" class="carousel">
+            <figure class="image is-4by3 carousel-cell">
+              <img
+                src="img/carousel/project6/1.png"
+                style="object-fit: contain"
+                alt="Science Transactions Home"
+              />
+            </figure>
+            <figure class="image is-4by3 carousel-cell">
+              <img
+                src="img/carousel/project6/2.png"
+                style="object-fit: contain"
+                alt="IJASCIS Journal"
+              />
+            </figure>
+            <figure class="image is-4by3 carousel-cell">
+              <img
+                src="img/carousel/project6/3.png"
+                style="object-fit: contain"
+                alt="GeoAI Journal"
+              />
+            </figure>
+          </div>
+
+          <div class="content">
+            <p>
+              Developed and customized an Open Journal Systems (OJS)-based
+              platform for
+              <strong
+                ><a href="https://sciencetransactions.com/" target="_blank"
+                  >Science Transactions</a
+                ></strong
+              >, a scholarly journal portal hosting multiple publications
+              including
+              <a
+                href="https://sciencetransactions.com/index.php/ijascis/"
+                target="_blank"
+                >IJASCIS</a
+              >
+              and
+              <a
+                href="https://sciencetransactions.com/index.php/geoai/"
+                target="_blank"
+                >GeoAI</a
+              >.
+            </p>
+            <ul>
+              <li>
+                Handled the setup, configuration, and customization of the OJS
+                framework for academic publishing workflows.
+              </li>
+              <li>
+                Created unique journal identities and landing pages for each
+                publication within the multi-journal platform.
+              </li>
+              <li>
+                Ensured responsive design and optimized performance for seamless
+                user experience across devices.
+              </li>
+              <li>
+                Integrated editorial workflows, manuscript submission, and
+                peer-review systems tailored to journal requirements.
+              </li>
+            </ul>
+
+            <div class="tags mt-3">
+              <span class="tag is-dark is-medium">
+                <span class="icon is-small mr-1">
+                  <i class="fas fa-book-open"></i>
+                </span>
+                Open Journal Systems
+              </span>
+
+              <span class="tag is-dark is-medium">
+                <span class="icon is-small mr-1">
+                  <i class="fab fa-php"></i>
+                </span>
+                PHP
+              </span>
+
+              <span class="tag is-dark is-medium">
+                <span class="icon is-small mr-1">
+                  <i class="fas fa-book"></i>
+                </span>
+                OJS
+              </span>
+
+              <span class="tag is-dark is-medium">
+                <span class="icon is-small mr-1">
+                  <i class="fas fa-university"></i>
+                </span>
+                Academic Journals
+              </span>
+
+              <span class="tag is-dark is-medium">
+                <span class="icon is-small mr-1">
+                  <i class="fas fa-newspaper"></i>
+                </span>
+                Publishing CMS
+              </span>
+            </div>
+          </div>
+        </section>
+        <footer class="modal-card-foot">
+          <button class="button is-success">Close</button>
+        </footer>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          <a
+            href="https://github.com/jonathandpenha1"
+            target="_blank"
+            class="icon has-text-primary"
+          >
+            <i class="fab fa-github"></i> <strong>jonathan</strong></a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/bundle.js"></script>
     <script src="js/particle.js"></script>
-<!-- AOS JS -->
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 800,
-    once: true
-  });
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Jonathan DPenha",
-  "alternateName": ["Jonathan D'Penha", "Jonathan Dpenha"],
-  "url": "https://yourdomain.com",
-  "sameAs": [
-    "https://www.linkedin.com/in/jonathan-dpenha/",
-    "https://github.com/jonathandpenha1"
-  ],
-  "jobTitle": "Full-Stack Developer",
-  "worksFor": {
-    "@type": "Organization",
-    "name": "Freelance"
-  },
-  "email": "mailto:dpenhajonathan@gmail.com"
-}
-</script>
-
-</body>
-
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        once: true,
+      });
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Jonathan DPenha",
+        "alternateName": ["Jonathan D'Penha", "Jonathan Dpenha"],
+        "url": "https://yourdomain.com",
+        "sameAs": [
+          "https://www.linkedin.com/in/jonathan-dpenha/",
+          "https://github.com/jonathandpenha1"
+        ],
+        "jobTitle": "Full-Stack Developer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Freelance"
+        },
+        "email": "mailto:dpenhajonathan@gmail.com"
+      }
+    </script>
+  </body>
 </html>
