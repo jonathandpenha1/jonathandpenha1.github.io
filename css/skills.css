@@ -120,8 +120,8 @@
 }
 
 .box-text img {
-  max-width: 32px;
-  max-height: 32px;
+  max-width: 100px;
+  max-height: 55px;
   filter: grayscale(100%) saturate(0);
   opacity: 0.5;
 }
