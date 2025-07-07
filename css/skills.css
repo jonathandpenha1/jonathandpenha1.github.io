@@ -82,7 +82,8 @@
 }
 
 /* Box faces */
-.box-face, .box-back {
+.box-face,
+.box-back {
   position: absolute;
   top: 0;
   left: 0;
@@ -92,10 +93,13 @@
   background-color: #dedede;
   transform: rotate(90deg);
   transform-style: preserve-3d;
-  transition: transform 1s, background-color 0s 0.3s;
+  transition:
+    transform 1s,
+    background-color 0s 0.3s;
 }
 
-.box-face .box-text, .box-back .box-text {
+.box-face .box-text,
+.box-back .box-text {
   line-height: 100px;
   text-align: center;
   font-size: 40px;
@@ -133,18 +137,20 @@
   font-size: 8px;
   color: #000;
   text-align: center;
-  border-top: 1px solid rgba(0,0,0,0.8);
+  border-top: 1px solid rgba(0, 0, 0, 0.8);
   padding: 5px 0;
   z-index: 1000;
   transform: rotate(-45deg);
-  transition: visibility 0s linear 0.3s, opacity 1s linear 0.3s;
+  transition:
+    visibility 0s linear 0.3s,
+    opacity 1s linear 0.3s;
 }
 
 .tooltip:after {
   position: absolute;
   top: -5px;
   left: 35px;
-  content: ' ';
+  content: " ";
   width: 0;
   height: 0;
   border-left: 5px solid transparent;
@@ -168,7 +174,10 @@
     margin-top: 10px !important;
     margin-right: 0 !important;
   }
-  .v-boxes.skills, .v-boxes.second, .v-boxes.third, .v-boxes.forth {
+  .v-boxes.skills,
+  .v-boxes.second,
+  .v-boxes.third,
+  .v-boxes.forth {
     margin-left: 0 !important;
   }
   .box {
@@ -176,7 +185,8 @@
     width: 80px;
     height: 80px;
   }
-  .box-face, .box-back {
+  .box-face,
+  .box-back {
     width: 80px;
     height: 80px;
   }
@@ -192,8 +202,7 @@
     left: 25px;
     width: 70px;
     font-size: 7px;
-      text-align: center;
-
+    text-align: center;
   }
 }
 
@@ -204,27 +213,26 @@
     justify-content: center;
   }
   .skills > .box {
-  width: 60px;        /* original was around 100px */
-  height: 50px;       /* adjust if you have height set */
-  font-size: 12px;    /* reduce font size */
-  padding: 5px 3px;   /* smaller padding */
-  margin: 0 -2px;      /* smaller margin between boxes */
-  box-sizing: border-box;
-}
+    width: 60px; /* original was around 100px */
+    height: 50px; /* adjust if you have height set */
+    font-size: 12px; /* reduce font size */
+    padding: 5px 3px; /* smaller padding */
+    margin: 0 -2px; /* smaller margin between boxes */
+    box-sizing: border-box;
+  }
 
-.skills > .box:first-child,
-.skills > .box:last-child {
-  width: 20px;        /* smaller empty boxes */
-  height: 50px;
-  margin: 0 6px;
-  background-color: transparent !important;
-  box-shadow: none !important;
-}
+  .skills > .box:first-child,
+  .skills > .box:last-child {
+    width: 20px; /* smaller empty boxes */
+    height: 50px;
+    margin: 0 6px;
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
 
-.skills > .box .box-text i {
-  font-size: 14px;    /* reduce letter size */
-  font-weight: bold;
-  color: #000;
-}
-
+  .skills > .box .box-text i {
+    font-size: 14px; /* reduce letter size */
+    font-weight: bold;
+    color: #000;
+  }
 }
