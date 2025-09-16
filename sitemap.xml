@@ -23,8 +23,8 @@
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://sciencetransactions.com/</loc>
-    <priority>0.85</priority>
+    <loc>https://sciencetransactions.com/index.php?journal=science-transactions</loc>
+    <priority>0.70</priority>
   </url>
 
   <!-- Play Store App -->
